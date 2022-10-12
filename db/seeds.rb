@@ -60,3 +60,5 @@ question = Question.create(body: 'Сработает ли данный код: p
 Answer.create(body: 'Необходимо дописать gets.chomp()', question_id: question.id)
 Answer.create(body: 'Код сработает в любом случае', question_id: question.id, correct: true)
 Answer.create(body: 'Код сработает только если введут строку, а не число', question_id: question.id)
+
+PassingTest.create(user_id: User.find_by(name: 'user').id, test_id: Test.find_by(title: 'Ruby').id)
