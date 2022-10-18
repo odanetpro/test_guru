@@ -5,11 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-category = Category.create!(title: 'Информатика')
+categories = Category.create!([{title: 'Информатика'}, {title: 'Прочее'}])
 users = User.create!([{name: 'admin'}, {name: 'user'}])
  
 #тест 'Ruby' категория 'Информатика'
-test = Test.create!(title: 'Ruby', category_id: category.id, author_id: users[0].id)
+test = Test.create!(title: 'Ruby', category_id: categories[0].id, author_id: users[0].id)
   
 question = Question.create!(body: 'Где записана сокращенная форма кода ниже: x = x/3', test_id: test.id)
 Answer.create!(body: 'x /= 3', question_id: question.id, correct: true)
