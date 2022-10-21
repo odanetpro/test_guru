@@ -6,6 +6,8 @@ class Test < ApplicationRecord
   has_many :passing_tests, dependent: :destroy
   has_many :users, through: :passing_tests
 
+  validates :title, presence: true
+
   scope :by_level, -> (level) { where(level: level) }
   scope :easy_level, -> { by_level([0, 1]) }
   scope :medium_level, -> { by_level(2..4) }
