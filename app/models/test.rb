@@ -7,6 +7,7 @@ class Test < ApplicationRecord
   has_many :users, through: :passing_tests
 
   validates :title, presence: true
+  validates :level, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
 
   scope :by_level, -> (level) { where(level: level) }
   scope :easy_level, -> { by_level([0, 1]) }
