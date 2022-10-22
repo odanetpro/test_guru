@@ -16,8 +16,11 @@ class Test < ApplicationRecord
   scope :medium_level, -> { by_level(2..4) }
   scope :difficult_level, -> { by_level(5..Float::INFINITY) }
 
-  scope :sort_by_category_title, -> (category_title) { joins(:category)
+  scope :by_category_title, -> (category_title) { joins(:category)
                                                          .where(categories: { title: category_title })
-                                                         .order(title: :desc)
-                                                         .pluck(:title) }
+                                                         .order(title: :desc) }
+  
+  def self.sort_by_category_title category_title
+    by_category_title(category_title).pluck(:title)
+  end
 end
