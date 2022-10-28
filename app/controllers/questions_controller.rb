@@ -1,6 +1,8 @@
 class QuestionsController < ApplicationController
+  before_action :find_test, only: %i[index create]
+
   def index
-    render plain: Question.where(test_id: params[:test_id]).map { |item| item.body }.join("\n")
+    render html: @test.questions.map { |item| "<p>#{item.id}: #{item.body}</p>" }.join.html_safe
   end
 
   def show; end
@@ -8,7 +10,7 @@ class QuestionsController < ApplicationController
   def new; end
 
   def create
-    question = Test.find(params[:test_id]).questions.new(question_create_params)
+    question = @test.questions.new(question_create_params)
     question.save
 
     question.persisted? ? render(plain: 'Вопрос создан!') : render(plain: question.errors.full_messages.to_s)
@@ -23,5 +25,9 @@ class QuestionsController < ApplicationController
 
   def question_create_params
     params.require(:question).permit(:body)
+  end
+
+  def find_test
+    @test = Test.find(params[:test_id])
   end
 end
