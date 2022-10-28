@@ -1,0 +1,14 @@
+<h1>Создать новый вопрос</h1>
+
+<form action="<%= test_questions_path %>" method="post">
+  <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+
+  <p>Для теста: "<%= Test.find(params[:test_id]).title %>"</p>
+   <p>
+      <label for="question-title">Текст вопроса:</label><br>
+      <input type="text" name="question[body]" id="question-body">
+   </p>
+   <p>
+      <input type="submit" value="Создать">
+   </p>
+</form>
