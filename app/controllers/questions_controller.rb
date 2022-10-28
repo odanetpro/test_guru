@@ -14,6 +14,11 @@ class QuestionsController < ApplicationController
     question.persisted? ? render(plain: 'Вопрос создан!') : render(plain: question.errors.full_messages.to_s)
   end
 
+  def destroy
+    message = Question.find(params[:id]).destroy ? 'Вопрос удален!' : 'Произошла ошибка. Вопрос не удален!'
+    render plain: message
+  end
+
   private
 
   def question_create_params

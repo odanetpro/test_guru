@@ -3,3 +3,6 @@
 <p>
   <%= Question.find(params[:id]).body %>
 </p>
+<p>
+  <%= button_to "Удалить вопрос", question_path, method: :delete %>
+</p>
