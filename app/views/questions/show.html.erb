@@ -1,7 +1,7 @@
 <h1>Вопрос:</h1>
 
 <p>
-  <%= Question.find(params[:id]).body %>
+  <%= @question.body %>
 </p>
 <p>
   <%= button_to "Удалить вопрос", question_path, method: :delete %>

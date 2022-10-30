@@ -1,5 +1,6 @@
 class QuestionsController < ApplicationController
-  before_action :find_test, only: %i[index create]
+  before_action :find_test, only: %i[index new create]
+  before_action :find_question, only: %i[show destroy]
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_resourse_not_found
 
@@ -12,25 +13,32 @@ class QuestionsController < ApplicationController
   def new; end
 
   def create
-    question = @test.questions.new(question_create_params)
-    question.save
-
-    question.persisted? ? render(plain: 'Вопрос создан!') : render(plain: question.errors.full_messages.to_s)
+    @question = @test.questions.build(question_params)
+    
+    if @question.save
+       redirect_to @question
+    else
+      render :new
+    end
   end
 
   def destroy
-    message = Question.find(params[:id]).destroy ? 'Вопрос удален!' : 'Произошла ошибка. Вопрос не удален!'
-    render plain: message
+    @question.destroy
+    render plain: 'Вопрос удален!'
   end
 
   private
 
-  def question_create_params
+  def question_params
     params.require(:question).permit(:body)
   end
 
   def find_test
     @test = Test.find(params[:test_id])
+  end
+
+  def find_question
+    @question = Question.find(params[:id])
   end
 
   def rescue_with_resourse_not_found
