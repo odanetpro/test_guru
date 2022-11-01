@@ -1,0 +1,8 @@
+<h1>Вопрос:</h1>
+
+<p>
+  <%= @question.body %>
+</p>
+<p>
+  <%= button_to "Удалить вопрос", question_path, method: :delete %>
+</p>
