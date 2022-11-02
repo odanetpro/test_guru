@@ -4,10 +4,6 @@ class QuestionsController < ApplicationController
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_resourse_not_found
 
-  def index
-    render html: @test.questions.map { |item| "<p>#{item.id}: #{item.body}</p>" }.join.html_safe
-  end
-
   def show; end
 
   def new; end
