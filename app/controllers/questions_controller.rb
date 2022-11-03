@@ -4,7 +4,9 @@ class QuestionsController < ApplicationController
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_resourse_not_found
 
-  def show; end
+  def show
+    @test = Test.find(@question.test_id)
+  end
 
   def new; end
 

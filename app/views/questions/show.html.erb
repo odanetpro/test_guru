@@ -1,8 +1,12 @@
-<h1>Вопрос:</h1>
+<h1>Вопрос для теста: "<%= @test.title %>"</h1>
 
 <p>
-  <%= @question.body %>
+  <strong>Текст вопроса: </strong><%= @question.body %>
 </p>
 <p>
-  <%= button_to "Удалить вопрос", question_path, method: :delete %>
+  <%= link_to "Редактировать", edit_question_path %> | 
+  <%= link_to "Удалить",
+              question_path, 
+              method: :delete,
+              data: { confirm: 'Вы уверены?' } %>
 </p>
