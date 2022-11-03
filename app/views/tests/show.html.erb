@@ -1,0 +1,14 @@
+<h1>Тест</h1>
+
+<p>
+  <strong>Название: </strong><%= @test.title %><br>
+  <strong>Сложность: </strong><%= @test.level %>
+</p>
+
+<p>
+  <strong>Список вопросов:</strong><br>
+  
+  <table>
+    <%= render @questions %>
+  </table>
+</p>
