@@ -8,7 +8,9 @@ class QuestionsController < ApplicationController
     @test = Test.find(@question.test_id)
   end
 
-  def new; end
+  def new
+    @question = @test.questions.build
+  end
 
   def create
     @question = @test.questions.build(question_params)
