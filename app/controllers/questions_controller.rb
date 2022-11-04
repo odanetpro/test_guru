@@ -34,7 +34,7 @@ class QuestionsController < ApplicationController
 
   def destroy
     @question.destroy
-    render plain: 'Вопрос удален!'
+    redirect_to @question.test
   end
 
   private
