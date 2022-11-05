@@ -8,27 +8,27 @@ class QuestionsController < ApplicationController
     @test = @question.test
   end
 
+  def new
+    @question = @test.questions.build
+  end
+
   def edit; end
+
+  def create
+    @question = @test.questions.build(question_params)
+
+    if @question.save
+      redirect_to @question
+    else
+      render :new
+    end
+  end
 
   def update
     if @question.update(question_params)
       redirect_to @question
     else
       render :edit
-    end
-  end
-
-  def new
-    @question = @test.questions.build
-  end
-
-  def create
-    @question = @test.questions.build(question_params)
-    
-    if @question.save
-       redirect_to @question
-    else
-      render :new
     end
   end
 

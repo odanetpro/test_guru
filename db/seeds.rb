@@ -5,12 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-categories = Category.create!([{title: 'Информатика'}, {title: 'Прочее'}])
-users = User.create!([{name: 'admin', email: 'admin@testguru.ru'}, {name: 'user', email: 'user@testguru.ru'}])
- 
-#тест 'Ruby' категория 'Информатика'
+categories = Category.create!([{ title: 'Информатика' }, { title: 'Прочее' }])
+users = User.create!([{ name: 'admin', email: 'admin@testguru.ru' }, { name: 'user', email: 'user@testguru.ru' }])
+
+# тест 'Ruby' категория 'Информатика'
 test = Test.create!(title: 'Ruby', category_id: categories[0].id, author_id: users[0].id)
-  
+
 question = Question.create!(body: 'Где записана сокращенная форма кода ниже: x = x/3', test_id: test.id)
 Answer.create!(body: 'x /= 3', question_id: question.id, correct: true)
 Answer.create!(body: 'Нет сокращенной формы', question_id: question.id)
@@ -41,7 +41,8 @@ Answer.create!(body: 'some = 0', question_id: question.id)
 Answer.create!(body: 'some = nil', question_id: question.id, correct: true)
 Answer.create!(body: 'some = «»', question_id: question.id)
 
-question = Question.create!(body: 'В каком варианте вы получите число без пропуска строки от пользователя:', test_id: test.id)
+question = Question.create!(body: 'В каком варианте вы получите число без пропуска строки от пользователя:',
+                            test_id: test.id)
 Answer.create!(body: 'num = gets.to_i', question_id: question.id)
 Answer.create!(body: 'num = gets.chomp()', question_id: question.id)
 Answer.create!(body: 'num = gets.chomp().to_i', question_id: question.id, correct: true)
@@ -51,12 +52,15 @@ Answer.create!(body: 'Ruby On Rails', question_id: question.id, correct: true)
 Answer.create!(body: 'Ruby Web', question_id: question.id)
 Answer.create!(body: 'Ruby Framework', question_id: question.id)
 
-question = Question.create!(body: 'Что покажет этот код: num = -6 num *= 2 num = num.abs() res = Math.sqrt(num * 12) print(«Результат: » + res.round().to_s):', test_id: test.id)
+question = Question.create!(
+  body: 'Что покажет этот код: num = -6 num *= 2 num = num.abs() res = Math.sqrt(num * 12) print(«Результат: » + res.round().to_s):', test_id: test.id
+)
 Answer.create!(body: 'Выведет: Ошибку', question_id: question.id)
 Answer.create!(body: 'Выведет: «Результат: -12»', question_id: question.id)
 Answer.create!(body: 'Выведет: «Результат: 12', question_id: question.id, correct: true)
 
-question = Question.create!(body: 'Сработает ли данный код: print(«Введите имя: ») name = gets puts(«Имя: » + name)', test_id: test.id)
+question = Question.create!(body: 'Сработает ли данный код: print(«Введите имя: ») name = gets puts(«Имя: » + name)',
+                            test_id: test.id)
 Answer.create!(body: 'Необходимо дописать gets.chomp()', question_id: question.id)
 Answer.create!(body: 'Код сработает в любом случае', question_id: question.id, correct: true)
 Answer.create!(body: 'Код сработает только если введут строку, а не число', question_id: question.id)
