@@ -1,9 +1,9 @@
 module ApplicationHelper
   def current_year
-    Time.now.year
+    Time.current.year
   end
 
-  def github_url author, repo
-    link_to link_to "TestGuru (©#{author})", repo, target: '_blank'
+  def github_url(author, repo)
+    "https://github.com/#{author}/#{repo}"
   end
 end
