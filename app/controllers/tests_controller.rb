@@ -11,6 +11,7 @@ class TestsController < ApplicationController
   end
 
   def start
+    @user.tests << @test
     redirect_to @user.passing_test(@test)
   end
 
