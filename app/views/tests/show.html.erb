@@ -7,11 +7,9 @@
 
 <p><%= link_to 'Новый вопрос', new_test_question_path(@test) %></p>
 
-<table>
-  <ol>
-    <%= render @questions %>
-  </ol>
-</table>
+<ol>
+  <%= render @questions %>
+</ol>
 
 <p>
   <%= link_to 'К списку тестов', tests_path %>
