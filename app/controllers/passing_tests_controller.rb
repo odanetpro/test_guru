@@ -1,0 +1,2 @@
+class PassingTestsController < ApplicationController
+end
