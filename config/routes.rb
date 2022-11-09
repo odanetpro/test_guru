@@ -3,5 +3,9 @@ Rails.application.routes.draw do
 
   resources :tests do
     resources :questions, shallow: true, only: %i[show new edit create update destroy]
+
+    member do
+      post :start
+    end
   end
 end
