@@ -22,10 +22,12 @@ class PassingTest < ApplicationRecord
   end
 
   def next_question
-    test.questions.order(:id).where("id > :current_question_id", current_question_id: current_question.id).first
+    test.questions.order(:id).where('id > :current_question_id', current_question_id: current_question.id).first
   end
 
   def correct_answer?(answer_ids)
+    return false if answer_ids.nil?
+
     current_question.answers.correct.ids.sort == answer_ids.map(&:to_i).sort
   end
 end
