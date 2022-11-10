@@ -8,4 +8,10 @@ Rails.application.routes.draw do
       post :start
     end
   end
+
+  resources :passing_tests, only: %i[show update] do
+    member do
+      get :result
+    end
+  end
 end
