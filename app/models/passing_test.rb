@@ -5,9 +5,17 @@ class PassingTest < ApplicationRecord
 
   before_validation :before_validation_set_first_question, on: :create
 
+  def accept!(answer_ids)
+    self.correct_questions += 1 if correct_answer?(answer_ids)
+  end
+
   private
 
   def before_validation_set_first_question
     self.current_question = test.questions.first if test.present?
+  end
+
+  def correct_answer?(answer_ids)
+    current_question.answers.correct.ids.sort == answer_ids.map(&:to_i).sort
   end
 end

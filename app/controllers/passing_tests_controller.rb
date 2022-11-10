@@ -7,6 +7,7 @@ class PassingTestsController < ApplicationController
   end
 
   def update
+    @passing_test.accept!(params[:answer_ids])
   end
 
   private
