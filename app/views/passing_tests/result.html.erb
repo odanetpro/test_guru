@@ -1,1 +1,12 @@
 <h1>Тест <%= @passing_test.test.title %> завершен!</h1>
+
+<% success_rate = @passing_test.success_rate %>
+
+<p>
+  <strong>Правильных ответов: </strong>
+  <span style="color: <%= percents_color(success_rate) %>"><%= success_rate %>%</span>
+</p>
+
+<p>
+  <%= result_message(success_rate) %>
+</p>
