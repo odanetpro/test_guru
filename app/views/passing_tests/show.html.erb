@@ -1,0 +1,16 @@
+<h1>Прохождение теста <%= @passing_test.test.title %></h1>
+
+<b>
+  <%= @passing_test.current_question.body %>
+</b>
+
+<%= form_with url: passing_test_path(@passing_test), local: true, method: :put do |form| %>
+  <%= form.collection_check_boxes :answer_ids, @passing_test.current_question.answers, :id, :body, include_hidden: false do |b| %>
+    <p>
+      <%= b.check_box %>
+      <%= b.label %>
+    </p>
+  <% end %>
+
+  <%= form.submit 'Далее' %>
+<% end %>
