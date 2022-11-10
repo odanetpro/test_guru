@@ -11,6 +11,10 @@ class PassingTest < ApplicationRecord
     save!
   end
 
+  def complited?
+    current_question.nil?
+  end
+
   private
 
   def before_validation_set_first_question
