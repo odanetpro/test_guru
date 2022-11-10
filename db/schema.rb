@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 2022_10_12_042234) do
     t.integer "user_id", null: false
     t.integer "test_id", null: false
     t.integer "current_question_id"
+    t.integer "current_question_number", default: 0
     t.integer "correct_questions", default: 0
     t.boolean "passed", default: false, null: false
     t.datetime "created_at", precision: 6, null: false

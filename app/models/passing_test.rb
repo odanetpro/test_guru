@@ -22,10 +22,12 @@ class PassingTest < ApplicationRecord
   private
 
   def before_validation_set_first_question
+    self.current_question_number = 1
     self.current_question = test.questions.first if test.present?
   end
 
   def before_update_set_to_next_question
+    self.current_question_number += 1
     self.current_question = next_question
   end
 
