@@ -8,6 +8,7 @@ class PassingTestsController < ApplicationController
 
   def update
     @passing_test.accept!(params[:answer_ids])
+    render :show
   end
 
   private
