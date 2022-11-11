@@ -1,15 +1,20 @@
 <h1>Тест <%= @passing_test.test.title %> завершен!</h1>
 
-<% success_rate = @passing_test.success_rate %>
+<% if @passing_test.sucsessful? %>
+  <p>
+    <strong>Правильных ответов: </strong>
+    <span style="color: green"><%= @passing_test.success_rate %>%</span>
+  </p>
 
-<p>
-  <strong>Правильных ответов: </strong>
-  <span style="color: <%= percents_color(success_rate) %>"><%= success_rate %>%</span>
-</p>
+  <p>Тест пройден!</p>
+<% else %>
+  <p>
+    <strong>Правильных ответов: </strong>
+    <span style="color: red"><%= @passing_test.success_rate %>%</span>
+  </p>
 
-<p>
-  <%= result_message(success_rate) %>
-</p>
+  <p>Тест не пройден :(</p>
+<% end %>
 
 <p>
   <%= link_to 'К списку тестов', tests_path %>

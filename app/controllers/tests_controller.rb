@@ -1,6 +1,5 @@
 class TestsController < ApplicationController
   before_action :set_test, only: %i[show start]
-  before_action :set_user, only: :start
 
   def index
     @tests = Test.all
@@ -10,8 +9,11 @@ class TestsController < ApplicationController
     @questions = @test.questions
   end
 
+  # TODO: fix after adding authorization
   def start
+    @user = User.last
     @user.tests << @test
+
     redirect_to @user.passing_test(@test)
   end
 
@@ -19,10 +21,5 @@ class TestsController < ApplicationController
 
   def set_test
     @test = Test.find(params[:id])
-  end
-
-  def set_user
-    # TODO: fix after adding authorization
-    @user = User.last
   end
 end
