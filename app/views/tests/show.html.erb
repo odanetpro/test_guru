@@ -1,19 +1,16 @@
-<h1>Тест</h1>
-
 <p>
-  <strong>Название: </strong><%= @test.title %><br>
+  <strong>Название теста: </strong><%= @test.title %><br>
   <strong>Сложность: </strong><%= @test.level %>
 </p>
 
-<p>
-  <strong>Список вопросов:</strong><br>
-  
-  <table>
-    <%= render @questions %>
-  </table>
+<h2>Список вопросов:</h2>
 
-  <p>
-    <%= link_to 'К списку тестов', tests_path %> |
-    <%= link_to 'Добавить вопрос', new_test_question_path(@test) %>
-  </p>
+<p><%= link_to 'Новый вопрос', new_test_question_path(@test) %></p>
+
+<ol>
+  <%= render @questions %>
+</ol>
+
+<p>
+  <%= link_to 'К списку тестов', tests_path %>
 </p>
