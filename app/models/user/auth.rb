@@ -5,8 +5,8 @@ module User::Auth
   attr_writer :password_confirmation
 
   included do
-    validates :name, presence: true
-    validates :email, presence: true
+    validates :name, presence: true, uniqueness: { case_sensitive: false }
+    validates :email, presence: true, uniqueness: { case_sensitive: false }
     validates :password, presence: true if proc { |u| u.password_digest.blank? }
     validates :password, confirmation: true
   end
