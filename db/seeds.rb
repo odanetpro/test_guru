@@ -6,10 +6,10 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 categories = Category.create!([{ title: 'Информатика' }, { title: 'Прочее' }])
-users = User.create!([{ name: 'admin', email: 'admin@testguru.ru' }, { name: 'user', email: 'user@testguru.ru' }])
+user = User.first
 
 # тест 'Ruby' категория 'Информатика'
-test = Test.create!(title: 'Ruby', category_id: categories[0].id, author_id: users[0].id)
+test = Test.create!(title: 'Ruby', category_id: categories[0].id, author_id: user.id)
 
 question = Question.create!(body: 'Где записана сокращенная форма кода x = x/3 ?', test_id: test.id)
 Answer.create!(body: 'x /= 3', question_id: question.id, correct: true)
