@@ -1,0 +1,8 @@
+<div>
+  <h1><%= link_to 'Гуру в мире тестов', root_path %></h1>
+  <% if logged_in? %>
+    <div>Добро пожаловать, Гуру <%= current_user.name %> | <%= link_to 'Выйти', logout_path %></div>
+  <% else %>
+    <div><%= link_to 'Войти', login_path %> | <%= link_to 'Зарегистрироваться', signup_path %></div>
+  <% end %>
+</div>
