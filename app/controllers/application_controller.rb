@@ -4,9 +4,9 @@ class ApplicationController < ActionController::Base
   private
 
   def authenticate_user!
-    unless current_user
-      redirect_to login_path
-    end
+    return if current_user
+
+    redirect_to login_path
   end
 
   def current_user
