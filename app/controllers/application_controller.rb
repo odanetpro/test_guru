@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   def authenticate_user!
     return if current_user
 
-    redirect_to login_path
+    redirect_to login_path, alert: 'Пожалуйста авторизуйтесь.'
   end
 
   def current_user

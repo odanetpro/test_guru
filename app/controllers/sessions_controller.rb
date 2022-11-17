@@ -8,6 +8,7 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
       redirect_to root_path
     else
+      flash.now[:alert] = 'Пожалуйста проверьте ваш e-mail и пароль.'
       render :new
     end
   end

@@ -1,4 +1,6 @@
 <%= form_with url: sessions_path, local: true do |form| %>
+  <%= show_flash %>
+
   <p>
     <%= form.label :name, 'Имя' %><br>
     <%= form.text_field :name, id: :name %>
