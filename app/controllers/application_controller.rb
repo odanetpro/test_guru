@@ -9,6 +9,7 @@ class ApplicationController < ActionController::Base
   def authenticate_user!
     return if current_user
 
+    cookies[:target_path] = request.fullpath
     redirect_to login_path, alert: 'Пожалуйста авторизуйтесь.'
   end
 
@@ -22,5 +23,9 @@ class ApplicationController < ActionController::Base
 
   def auth_controller?
     %w[users sessions].include?(params[:controller])
+  end
+
+  def target_path
+    cookies[:target_path] || root_path
   end
 end
