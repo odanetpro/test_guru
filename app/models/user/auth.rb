@@ -1,4 +1,6 @@
 module User::Auth
+  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
+
   extend ActiveSupport::Concern
 
   attr_reader :password
@@ -6,7 +8,7 @@ module User::Auth
 
   included do
     validates :name, presence: true, uniqueness: { case_sensitive: false }
-    validates :email, presence: true, uniqueness: { case_sensitive: false }
+    validates :email, presence: true, uniqueness: { case_sensitive: false }, format: { with: VALID_EMAIL_REGEX }
     validates :password, presence: true if proc { |u| u.password_digest.blank? }
     validates :password, confirmation: true
   end
