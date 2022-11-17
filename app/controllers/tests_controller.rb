@@ -9,9 +9,8 @@ class TestsController < ApplicationController
     @questions = @test.questions
   end
 
-  # TODO: fix after adding authorization
   def start
-    @user = User.last
+    @user = @current_user
     @user.tests << @test
 
     redirect_to @user.passing_test(@test)
