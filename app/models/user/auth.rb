@@ -11,6 +11,10 @@ module User::Auth
     validates :password, confirmation: true
   end
 
+  def authenticate(password_string)
+    digest(password_string) == password_digest ? self : false
+  end
+
   def password=(password_string)
     if password_string.nil?
       self.password_digest = nil
