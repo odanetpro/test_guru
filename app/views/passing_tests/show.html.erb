@@ -1,6 +1,6 @@
-<h1>Прохождение теста <%= @passing_test.test.title %></h1>
+<h2>Прохождение теста <%= @passing_test.test.title %></h2>
 
 <p>Вопрос <%= @passing_test.current_question_number %> из <%= @passing_test.test.questions.count %>:</p>
-<h2><%= @passing_test.current_question.body %></h2>
+<h3><%= @passing_test.current_question.body %></h3>
 
 <%= render 'form' %>
