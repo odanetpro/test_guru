@@ -26,6 +26,6 @@ class ApplicationController < ActionController::Base
   end
 
   def target_path
-    cookies[:target_path] || root_path
+    cookies.delete(:target_path) || root_path
   end
 end

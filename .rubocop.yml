@@ -11,4 +11,3 @@ Style/FrozenStringLiteralComment:
 
 Style/ClassAndModuleChildren:
   Enabled: false
-  

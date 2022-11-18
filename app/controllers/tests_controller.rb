@@ -10,10 +10,9 @@ class TestsController < ApplicationController
   end
 
   def start
-    @user = @current_user
-    @user.tests << @test
+    current_user.tests << @test
 
-    redirect_to @user.passing_test(@test)
+    redirect_to current_user.passing_test(@test)
   end
 
   private
