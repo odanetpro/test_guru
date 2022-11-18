@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module SessionsHelper
   def show_flash(options = {})
     tag = options[:tag] || :p

@@ -7,7 +7,7 @@ Style/Documentation:
   Enabled: false
 
 Style/FrozenStringLiteralComment:
-  Enabled: false
+  Enabled: true
 
 Style/ClassAndModuleChildren:
   Enabled: false
