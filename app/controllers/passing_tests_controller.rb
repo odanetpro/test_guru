@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class PassingTestsController < ApplicationController
   before_action :set_passing_test, only: %i[show update result]
 

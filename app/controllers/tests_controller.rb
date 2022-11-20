@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class TestsController < ApplicationController
   before_action :set_test, only: %i[show start]
 
@@ -9,12 +11,10 @@ class TestsController < ApplicationController
     @questions = @test.questions
   end
 
-  # TODO: fix after adding authorization
   def start
-    @user = User.last
-    @user.tests << @test
+    current_user.tests << @test
 
-    redirect_to @user.passing_test(@test)
+    redirect_to current_user.passing_test(@test)
   end
 
   private
