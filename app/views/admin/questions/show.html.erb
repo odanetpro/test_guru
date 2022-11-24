@@ -6,6 +6,8 @@
 
 <h2>Список ответов:</h2>
 
+<p><%= link_to 'Новый ответ', new_admin_question_answer_path(@question) %></p>
+
 <ol>
   <%= render @question.answers %>
 </ol>
