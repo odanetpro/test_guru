@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class Admin::TestsController < ApplicationController
+class Admin::TestsController < Admin::BaseController
   def index
     @tests = Test.all
   end

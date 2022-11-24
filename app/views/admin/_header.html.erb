@@ -1,0 +1,5 @@
+<div>
+  <h1><%= link_to 'ГУРУ В МИРЕ ТЕСТОВ', root_path %> | ПАНЕЛЬ АДМИНИСТРАТОРА</h1>
+  
+  <div>Добро пожаловать, Гуру <b><%= current_user.name %></b> | <%= link_to 'Выйти', destroy_user_session_path, method: :delete %></div>
+</div>

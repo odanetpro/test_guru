@@ -23,4 +23,8 @@ class User < ApplicationRecord
   def passing_test(test)
     passing_tests.order(id: :desc).find_by(test_id: test.id)
   end
+
+  def admin?
+    is_a?(Admin)
+  end
 end

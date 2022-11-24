@@ -7,7 +7,7 @@ class TestsController < ApplicationController
 
   def start
     @test = Test.find(params[:id])
-    
+
     current_user.tests << @test
     redirect_to current_user.passing_test(@test)
   end
