@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class Admin::TestsController < Admin::BaseController
-  before_action :set_test, only: %i[show edit update]
+  before_action :set_test, only: %i[show edit update destroy]
 
   def index
     @tests = Test.all
@@ -34,6 +34,11 @@ class Admin::TestsController < Admin::BaseController
     else
       render :edit
     end
+  end
+
+  def destroy
+    @test.destroy
+    redirect_to admin_tests_path
   end
 
   private
