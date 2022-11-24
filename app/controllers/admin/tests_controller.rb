@@ -30,7 +30,7 @@ class Admin::TestsController < Admin::BaseController
 
   def update
     if @test.update(test_params)
-      redirect_to [:admin, @test]
+      redirect_to admin_tests_path
     else
       render :edit
     end
