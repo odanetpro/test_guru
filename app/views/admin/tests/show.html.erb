@@ -5,12 +5,12 @@
 
 <h2>Список вопросов:</h2>
 
-<p><%= link_to 'Новый вопрос', new_test_question_path(@test) %></p>
+<p><%= link_to 'Новый вопрос', new_admin_test_question_path(@test) %></p>
 
 <ol>
   <%= render @questions %>
 </ol>
 
 <p>
-  <%= link_to 'К списку тестов', tests_path %>
+  <%= link_to 'К списку тестов', admin_tests_path %>
 </p>

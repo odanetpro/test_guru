@@ -4,10 +4,10 @@
   <strong>Текст вопроса: </strong><%= @question.body %>
 </p>
 <p>
-  <%= link_to 'К списку вопросов', test_path(@test) %> |
-  <%= link_to 'Редактировать', edit_question_path %> |
+  <%= link_to 'К списку вопросов', admin_test_path(@test) %> |
+  <%= link_to 'Редактировать', edit_admin_question_path %> |
   <%= link_to 'Удалить',
-              question_path, 
+              admin_question_path, 
               method: :delete,
               data: { confirm: 'Вы уверены?' } %>
 </p>
