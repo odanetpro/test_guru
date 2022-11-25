@@ -1,0 +1,18 @@
+<%= form_with(model: [:admin, @test], local: true) do |form| %>
+  <%= render 'shared/errors', resource: @test %>
+
+  <p>
+    <%= form.label :title, 'Название теста' %><br>
+    <%= form.text_field :title %>
+  </p>
+  <p>
+    <%= form.label :level, 'Сложность' %><br>
+    <%= form.text_field :level %>
+  </p>
+  <p>
+    <%= form.label :category_id, 'Категория' %>:<br>
+    <%= form.collection_select :category_id, all_categories, :id, :title, prompt: 'Выберите категорию' %>
+  </p>
+
+  <p><%= form.submit 'Сохранить' %></p>
+<% end %>

@@ -1,7 +1,15 @@
 # frozen_string_literal: true
 
 class User < ApplicationRecord
-  include Auth
+  # Include default devise modules. Others available are:
+  # :lockable, :timeoutable, and :omniauthable
+  devise :database_authenticatable,
+         :registerable,
+         :recoverable,
+         :rememberable,
+         :trackable,
+         :validatable,
+         :confirmable
 
   has_many :passing_tests, dependent: :destroy
   has_many :tests, through: :passing_tests
@@ -14,5 +22,9 @@ class User < ApplicationRecord
 
   def passing_test(test)
     passing_tests.order(id: :desc).find_by(test_id: test.id)
+  end
+
+  def admin?
+    is_a?(Admin)
   end
 end

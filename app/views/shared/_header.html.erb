@@ -1,8 +1,6 @@
 <div>
-  <h1><%= link_to 'Гуру в мире тестов', root_path %></h1>
-  <% if logged_in? %>
-    <div>Добро пожаловать, Гуру <%= current_user.name %> | <%= link_to 'Выйти', logout_path, method: :delete %></div>
-  <% else %>
-    <div><%= link_to 'Войти', login_path %> | <%= link_to 'Зарегистрироваться', signup_path %></div>
+  <h1><%= link_to 'ГУРУ В МИРЕ ТЕСТОВ', root_path %></h1>
+  <% if user_signed_in? %>
+    <div>Добро пожаловать, Гуру <b><%= current_user.name %></b> | <%= link_to 'Выйти', destroy_user_session_path, method: :delete %></div>
   <% end %>
 </div>
