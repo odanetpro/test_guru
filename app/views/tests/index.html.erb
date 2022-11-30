@@ -1,10 +1,10 @@
-<h2>Список тестов</h2>
+<h2><%= t('.header') %></h2>
 
 <table>
-  <th>Название</th>
-  <th>Сложность</th>
-  <th>Количество вопросов</th>
-  <th>Действия</th>
+  <th><%= t('.th_title') %></th>
+  <th><%= t('.th_level') %></th>
+  <th><%= t('.th_amount') %></th>
+  <th><%= t('.th_actions') %></th>
 
   <%= render @tests %>
 </table>

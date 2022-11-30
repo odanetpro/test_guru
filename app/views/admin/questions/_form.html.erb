@@ -2,9 +2,9 @@
   <%= render 'shared/errors', resource: @question %>
 
   <p>
-    <%= form.label :body, 'Текст вопроса' %><br>
+    <%= form.label :body %><br>
     <%= form.text_field :body %>
   </p>
 
-  <p><%= form.submit 'Сохранить' %></p>
+  <p><%= form.submit %></p>
 <% end %>

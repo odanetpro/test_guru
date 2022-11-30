@@ -1,17 +1,17 @@
-<h2>Вопрос для теста: "<%= @test.title %>"</h2>
+<h2><%= t('.header', test: @test.title) %></h2>
 
 <p>
-  <strong>Текст вопроса: </strong><%= @question.body %>
+  <strong><%= t('.body') %>: </strong><%= @question.body %>
 </p>
 
-<h2>Список ответов:</h2>
+<h2><%= t('.list') %>:</h2>
 
-<p><%= link_to 'Новый ответ', new_admin_question_answer_path(@question) %></p>
+<p><%= link_to t('.link_new'), new_admin_question_answer_path(@question) %></p>
 
 <ol>
   <%= render @question.answers %>
 </ol>
 
 <p>
-  <%= link_to 'К списку вопросов', admin_test_path(@test) %>
+  <%= link_to t('.link_questions'), admin_test_path(@test) %>
 </p>

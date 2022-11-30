@@ -2,13 +2,13 @@
   <%= render 'shared/errors', resource: @answer %>
 
   <p>
-    <%= form.label :body, 'Текст ответа' %><br>
+    <%= form.label :body %><br>
     <%= form.text_field :body %>
   </p>
   <p>
     <%= form.check_box :correct %>
-    <%= form.label :correct, 'Правильный ответ' %><br>
+    <%= form.label :correct %><br>
   </p>
 
-  <p><%= form.submit 'Сохранить' %></p>
+  <p><%= form.submit %></p>
 <% end %>

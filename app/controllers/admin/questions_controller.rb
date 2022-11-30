@@ -54,6 +54,6 @@ class Admin::QuestionsController < Admin::BaseController
   end
 
   def rescue_with_resourse_not_found
-    render html: '<p>Ресурс не найден!</p>'.html_safe, status: :not_found
+    render html: "<p>#{t('.resourse_not_found')}</p>".html_safe, status: :not_found
   end
 end

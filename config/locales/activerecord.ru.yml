@@ -1,0 +1,16 @@
+ru:
+  activerecord:
+    models:
+      test: 'Тест'
+      question: 'Вопрос'
+      answer: 'Ответ'
+
+    attributes:
+      test:
+        title: 'Название'
+        level: 'Сложность'
+        category: 'Категория'
+      question:
+        body: 'Текст вопроса'
+      answer:
+        body: 'Текст ответа'

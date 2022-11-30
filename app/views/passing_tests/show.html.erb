@@ -1,6 +1,6 @@
-<h2>Прохождение теста <%= @passing_test.test.title %></h2>
+<h2><%= t('.header', test_title: @passing_test.test.title) %></h2>
 
-<p>Вопрос <%= @passing_test.current_question_number %> из <%= @passing_test.test.questions.count %>:</p>
+<p><%= t('.nav', number: @passing_test.current_question_number, count: @passing_test.test.questions.count) %>:</p>
 <h3><%= @passing_test.current_question.body %></h3>
 
 <%= render 'form' %>

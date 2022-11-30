@@ -1,8 +1,8 @@
 <li><%= question.body %><br>
-    <%= link_to 'Открыть', admin_question_path(question) %> |
-    <%= link_to 'Изменить', edit_admin_question_path(question) %> |
-    <%= link_to 'Удалить',
+    <%= link_to t('.link_open'), admin_question_path(question) %> |
+    <%= link_to t('.link_edit'), edit_admin_question_path(question) %> |
+    <%= link_to t('.link_delete'),
                 admin_question_path(question),
                 method: :delete,
-                data: { confirm: 'Вы уверены?' } %>
+                data: { confirm: t('.confirm') } %>
 </li>
