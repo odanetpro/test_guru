@@ -1,6 +1,6 @@
 <div>
-  <h1><%= link_to 'ГУРУ В МИРЕ ТЕСТОВ', root_path %></h1>
+  <h1><%= link_to t('general.app_title'), root_path %></h1>
   <% if user_signed_in? %>
-    <div>Добро пожаловать, Гуру <b><%= current_user.name %></b> | <%= link_to 'Выйти', destroy_user_session_path, method: :delete %></div>
+    <div><%= t('general.greetings_html', name: current_user.name) %>  | <%= link_to t('general.link_logout'), destroy_user_session_path, method: :delete %></div>
   <% end %>
 </div>

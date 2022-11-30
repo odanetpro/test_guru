@@ -1,3 +1,132 @@
 ru:
-  hello: "Привет мир"
+  general:
+    app_title: 'ГУРУ В МИРЕ ТЕСТОВ'
+    greetings_html: 'Добро пожаловать, Гуру <b>%{name}</b>'
+    admin_required: 'Вы не авторизованы для просмотра этой страницы!'
+    link_logout: 'Выйти'
   
+  validate_messages:
+    number_of_answers: 'превышено количество возможных ответов'
+
+  admin:
+    header:
+      admin_panel: 'ПАНЕЛЬ АДМИНИСТРАТОРА'
+      
+    tests:
+      index:
+        header: 'Список тестов'
+        link_new_test: 'Новый тест'
+        th_title: 'Название'
+        th_level: 'Сложность'
+        th_amount: 'Количество вопросов'
+        th_actions: 'Действия'
+      show:
+        title: 'Название теста'
+        level: 'Сложность'
+        list: 'Список вопросов'
+        link_new: 'Новый вопрос'
+        link_tests: 'К списку тестов'
+      new:
+        header: 'Создать тест'
+      edit:
+        header: 'Редактировать тест'
+      test:
+        link_open: 'Открыть'
+        link_edit: 'Изменить'
+        link_delete: 'Удалить'
+        confirm: 'Вы уверены?'
+    
+    questions:
+      show:
+        header: 'Вопрос для теста "%{test}"'
+        body: 'Текст вопроса'
+        list: 'Список ответов'
+        link_new: 'Новый ответ'
+        link_questions: 'К списку вопросов'
+        resourse_not_found: 'Ресурс не найден!'
+      new:
+        header: 'Создать вопрос для теста "%{test}"'
+      edit:
+        header: 'Редактировать вопрос для теста "%{test}"'
+      question:
+        link_open: 'Открыть'
+        link_edit: 'Изменить'
+        link_delete: 'Удалить'
+        confirm: 'Вы уверены?'
+
+    answers:
+      show:
+        header: 'Вопрос'
+        answer: 'Ответ'
+        right_answer: 'Правильный ответ'
+        link_answers: 'К списку ответов'
+        y: 'Да'
+        n: 'Нет'
+      new:
+        header: 'Создать ответ на вопрос "%{question}"'
+      edit:
+        header: 'Редактировать ответ на вопрос "%{question}"'
+      answer:
+        link_open: 'Открыть'
+        link_edit: 'Изменить'
+        link_delete: 'Удалить'
+        confirm: 'Вы уверены?'       
+
+  helpers:
+    submit:
+      test:
+        create: 'Сохранить'
+        update: 'Сохранить'
+      question:
+        create: 'Сохранить'
+        update: 'Сохранить'
+      answer:
+        create: 'Сохранить'
+        update: 'Сохранить'
+
+    label:
+      test:
+        title: 'Название'
+        level: 'Сложность'
+        category_id: 'Категория'
+      question:
+        body: 'Текст вопроса'
+      answer:
+        body: 'Текст ответа'
+        correct: 'правильный ответ'
+    
+    select:
+      prompt: 'Выберите пожалуйста'
+
+  tests:
+    index:
+      header: 'Список тестов'
+      th_title: 'Название'
+      th_level: 'Сложность'
+      th_amount: 'Количество вопросов'
+      th_actions: 'Действия'
+    test:
+      button_start: 'Пройти'
+
+  passing_tests:
+    show:
+      header: 'Прохождение теста "%{test_title}"'
+      nav: 'Вопрос %{number} из %{count}'
+    result:
+      header: 'Тест %{test_title} завершен!'
+      right_questions: 'Правильных ответов'
+      test_passed: 'Тест пройден!'
+      test_failed: 'Тест не пройден :('
+      link_tests: 'К списку тестов'
+    form:
+      submit: 'Далее'
+  
+  shared:
+    errors:
+      header: 
+        one: "Обнаружена %{count} ошибка"
+        few: "Обнаружены %{count} ошибки"
+        many: "Обнаружено %{count} ошибок"
+        other: "Обнаружено %{count} ошибки"
+    footer:
+      about_html: 'Это учебный проект <a href="http://thinknetica.com/" target="_blank">в онлайн-школе Thinknetica</a> который позволяет создавать и проходить различные тесты.'

@@ -30,4 +30,132 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  general:
+    app_title: 'TestGuru'
+    greetings_html: 'Welcome, Guru <b>%{name}</b>'
+    admin_required: 'You are not authorized to view this page!'
+    link_logout: 'Log out'
+  
+  validate_messages:
+    number_of_answers: 'number of answers exceeded'
+
+  admin:
+    header:
+      admin_panel: 'Admin Panel'
+      
+    tests:
+      index:
+        header: 'Tricky Tests'
+        link_new_test: 'New test'
+        th_title: 'Title'
+        th_level: 'Level'
+        th_amount: 'Number of questions'
+        th_actions: 'Actions'
+      show:
+        title: 'Title'
+        level: 'Level'
+        list: 'Questions'
+        link_new: 'New question'
+        link_tests: 'To tests'
+      new:
+        header: 'Create New test'
+      edit:
+        header: 'Edit test'
+      test:
+        link_open: 'Open'
+        link_edit: 'Edit'
+        link_delete: 'Delete'
+        confirm: 'Are you sure?'
+    
+    questions:
+      show:
+        header: '"%{test}" question'
+        body: 'Body'
+        list: 'Answers'
+        link_new: 'New answer'
+        link_questions: 'To questions'
+        resourse_not_found: 'Resource not found!'
+      new:
+        header: 'Create "%{test}" question'
+      edit:
+        header: 'Edit "%{test}" question'
+      question:
+        link_open: 'Open'
+        link_edit: 'Edit'
+        link_delete: 'Delete'
+        confirm: 'Are you sure?'
+
+    answers:
+      show:
+        header: 'Question'
+        answer: 'Answer'
+        right_answer: 'Correct'
+        link_answers: 'To answers'
+        y: 'Yes'
+        n: 'No'
+      new:
+        header: 'Create "%{question}" answer'
+      edit:
+        header: 'Edit "%{question}" answer'
+      answer:
+        link_open: 'Open'
+        link_edit: 'Edit'
+        link_delete: 'Delete'
+        confirm: 'Are you sure?'       
+
+  helpers:
+    submit:
+      test:
+        create: 'Save'
+        update: 'Save'
+      question:
+        create: 'Save'
+        update: 'Save'
+      answer:
+        create: 'Save'
+        update: 'Save'
+
+    label:
+      test:
+        title: 'Title'
+        level: 'Level'
+        category_id: 'Category'
+      question:
+        body: 'Body'
+      answer:
+        body: 'Body'
+        correct: 'correct'
+    
+    select:
+      prompt: 'Please select'
+
+  tests:
+    index:
+      header: 'Tricky tests'
+      th_title: 'Title'
+      th_level: 'Level'
+      th_amount: 'Number of questions'
+      th_actions: 'Actions'
+    test:
+      button_start: 'Start'
+
+  passing_tests:
+    show:
+      header: 'Passing "%{test_title}" test'
+      nav: 'Question %{number} from %{count}'
+    result:
+      header: 'Test %{test_title} completed!'
+      right_questions: 'Correct answers'
+      test_passed: 'Test passed!'
+      test_failed: 'Test failed :('
+      link_tests: 'To tests'
+    form:
+      submit: 'Next'
+  
+  shared:
+    errors:
+      header: 
+        one: "%{count} error found"
+        other: "%{count} errors found"
+    footer:
+      about_html: 'This is a learning project <a href="http://thinknetica.com/" target="_blank"> at the Thinknetica online school</a> that allows you to create and take various tests.'

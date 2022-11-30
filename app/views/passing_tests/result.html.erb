@@ -1,21 +1,21 @@
-<h2>Тест <%= @passing_test.test.title %> завершен!</h2>
+<h2><%= t('.header', test_title: @passing_test.test.title) %></h2>
 
 <% if @passing_test.sucsessful? %>
   <p>
-    <strong>Правильных ответов: </strong>
+    <strong><%= t('.right_questions') %>: </strong>
     <span style="color: green"><%= @passing_test.success_rate %>%</span>
   </p>
 
-  <p>Тест пройден!</p>
+  <p><%= t('.test_passed') %></p>
 <% else %>
   <p>
-    <strong>Правильных ответов: </strong>
+    <strong><%= t('.right_questions') %>: </strong>
     <span style="color: red"><%= @passing_test.success_rate %>%</span>
   </p>
 
-  <p>Тест не пройден :(</p>
+  <p><%= t('.test_failed') %></p>
 <% end %>
 
 <p>
-  <%= link_to 'К списку тестов', tests_path %>
+  <%= link_to t('.link_tests'), tests_path %>
 </p>
