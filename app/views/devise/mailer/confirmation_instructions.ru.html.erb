@@ -1,0 +1,5 @@
+<p>Добро пожаловать, Гуру <%= @resource.name %>!</p>
+
+<p>Вы можете подтвердить адрес электронной почты своей учетной записи по ссылке ниже:</p>
+
+<p><%= link_to 'Подтвердить', confirmation_url(@resource, confirmation_token: @token) %></p>
