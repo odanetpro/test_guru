@@ -12,4 +12,14 @@ module ApplicationHelper
   def all_categories
     Category.all
   end
+
+  def flash_class(key)
+    classes = {
+      alert: 'alert alert-danger',
+      notice: 'alert alert-success',
+      default: 'alert alert-light'
+    }
+
+    classes[key.to_sym] || classes[:default]
+  end
 end
