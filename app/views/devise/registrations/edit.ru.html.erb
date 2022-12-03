@@ -42,7 +42,7 @@
   </div>
 
   <div class="actions">
-    <%= f.submit "Обновить" %>
+    <%= f.submit "Обновить", class: 'btn btn-primary mt-3' %>
   </div>
 <% end %>
 
@@ -50,4 +50,6 @@
 
 <p>Что-то не понравилось? <%= button_to "Удалить мой аккаунт :(", registration_path(resource_name), data: { confirm: "Вы уверены?" }, method: :delete %></p>
 
-<%= link_to "Back", :back %>
+<div class="mt-3">
+  <%= link_to "Back", :back %>
+</div>
