@@ -11,8 +11,8 @@
   </p>
   <p>
     <%= form.label :category_id %>:<br>
-    <%= form.collection_select :category_id, all_categories, :id, :title, prompt: true %>
+    <%= form.collection_select :category_id, all_categories, :id, :title, { prompt: true }, { class: 'p-1' } %>
   </p>
 
-  <p><%= form.submit %></p>
+  <p><%= form.submit class: 'btn btn-primary' %></p>
 <% end %>

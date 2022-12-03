@@ -11,9 +11,15 @@
   </head>
 
   <body>
-    <%= render 'admin/header' %>
-    <%= render 'shared/flash' %>
-    <%= yield %>
+    <div class="container-flex">
+      <%= render 'admin/header' %>
+    <div>
+
+    <div class="container">
+      <%= render 'shared/flash' %>
+      <%= yield %>
+    </div>
+    
     <%= render 'shared/footer' %>
   </body>
 </html>
