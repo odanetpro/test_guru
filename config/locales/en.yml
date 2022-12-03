@@ -153,6 +153,9 @@ en:
       submit: 'Next'
   
   shared:
+    header:
+      login: "Log in"
+      signup: "Sign up"
     errors:
       header: 
         one: "%{count} error found"
