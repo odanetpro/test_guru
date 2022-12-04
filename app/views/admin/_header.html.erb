@@ -1,5 +1,22 @@
-<div>
-  <h1><%= link_to t('general.app_title'), root_path %> | <%= t('.admin_panel') %></h1>
-  
-  <div><%= t('general.greetings_html', name: current_user.name) %> | <%= link_to t('general.link_logout'), destroy_user_session_path, method: :delete %></div>
-</div>
+<header>
+  <nav class="navbar navbar-dark navbar-expand-lg p-3 mb-5" style="background-color: rgba(72, 170, 242);">
+    <div class="container">
+      <strong><%= link_to t('general.app_title'), root_path, class: 'navbar-brand' %></strong>
+      
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <span class="navbar-text"><%= t('.admin_panel') %></span>
+          </li>
+        </ul>
+      
+        <span class="navbar-text">
+          <% if user_signed_in? %>
+            <%= t('general.greetings_html', name: current_user.name) %> | 
+            <%= link_to t('general.link_logout'), destroy_user_session_path, method: :delete %>
+          <% end %>
+        </span>
+      </div>
+    </div>
+  </nav>
+</header>

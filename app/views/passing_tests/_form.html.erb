@@ -1,10 +1,10 @@
 <%= form_with url: passing_test_path(@passing_test), local: true, method: :put do |form| %>
   <%= form.collection_check_boxes :answer_ids, @passing_test.current_question.answers, :id, :body, include_hidden: false do |b| %>
-    <p>
-      <%= b.check_box %>
-      <%= b.label %>
+    <p class="mt-3">
+      <%= b.check_box class: 'form-check-input ms-3' %>
+      <%= b.label class: 'ms-1' %>
     </p>
   <% end %>
 
-  <%= form.submit t('.submit') %>
+  <%= form.submit t('.submit'), class: 'btn btn-primary' %>
 <% end %>

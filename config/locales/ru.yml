@@ -122,6 +122,9 @@ ru:
       submit: 'Далее'
   
   shared:
+    header:
+      login: "Войти"
+      signup: "Зарегистрироваться"
     errors:
       header: 
         one: "Обнаружена %{count} ошибка"
