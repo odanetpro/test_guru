@@ -18,9 +18,10 @@ class PassingTestsController < ApplicationController
   end
 
   def gist
-    result = GistQuestionService.new(@passing_test.current_question).call
+    service = GistQuestionService.new(@passing_test.current_question)
+    result = service.call
 
-    flash_options = if result.is_a?(Sawyer::Resource)
+    flash_options = if service.response_success?
                       { notice: t('.success', gist_url: result.html_url) }
                     else
                       { alert: t('.failure', gist_url: result.html_url) }
