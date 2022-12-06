@@ -20,7 +20,13 @@ class PassingTestsController < ApplicationController
   def gist
     result = GistQuestionService.new(@passing_test.current_question).call
 
-    redirect_to @passing_test
+    flash_options = if result.is_a?(Sawyer::Resource)
+                      { notice: t('.success', gist_url: result.html_url) }
+                    else
+                      { alert: t('.failure', gist_url: result.html_url) }
+                    end
+
+    redirect_to @passing_test, flash_options
   end
 
   private
