@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class GistQuestionService
-  ACCESS_TOKEN = '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'
+  ACCESS_TOKEN = ENV['GITHUB_TOKEN']
 
   def initialize(question, client: nil)
     @question = question
