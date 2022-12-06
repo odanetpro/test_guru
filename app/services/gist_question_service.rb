@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class GistQuestionService
-  ACCESS_TOKEN = ENV['GITHUB_TOKEN']
+  ACCESS_TOKEN = ENV.fetch('GITHUB_TOKEN', nil)
 
   def initialize(question, client: nil)
     @question = question
@@ -12,10 +12,8 @@ class GistQuestionService
 
   def call
     @client.create_gist(gist_params)
-  end
-
-  def response_success?
-    @client.last_response.status == 201
+  rescue StandardError
+    false
   end
 
   private
