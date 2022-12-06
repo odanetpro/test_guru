@@ -24,7 +24,7 @@ class PassingTestsController < ApplicationController
     flash_options = if service.response_success?
                       { notice: t('.success', gist_url: result.html_url) }
                     else
-                      { alert: t('.failure', gist_url: result.html_url) }
+                      { alert: t('.failure') }
                     end
 
     redirect_to @passing_test, flash_options
