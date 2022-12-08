@@ -46,6 +46,8 @@ en:
   admin:
     header:
       admin_panel: 'Admin Panel'
+      all_tests: 'Tests'
+      all_gists: 'Gists'
       
     tests:
       index:
@@ -105,7 +107,14 @@ en:
         link_open: 'Open'
         link_edit: 'Edit'
         link_delete: 'Delete'
-        confirm: 'Are you sure?'       
+        confirm: 'Are you sure?'
+    
+    gists:
+      index:
+        header: 'Github gists'
+        th_question: 'Question'
+        th_url: 'URL'
+        th_email: 'Email'
 
   helpers:
     submit:
