@@ -5,8 +5,14 @@
       
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
+          <li class="nav-item mt-2">
             <span class="navbar-text"><%= t('.admin_panel') %></span>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="<%= admin_tests_path %>"><%= t('.all_tests') %></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="<%= admin_gists_path %>"><%= t('.all_gists') %></a>
           </li>
         </ul>
       
