@@ -26,6 +26,10 @@ class PassingTestsController < ApplicationController
                       { alert: t('.failure') }
                     end
 
+    if result
+      Gist.create(question_id: @passing_test.current_question.id, url: result.html_url, user_id: @passing_test.user.id)
+    end
+
     redirect_to @passing_test, flash_options
   end
 
