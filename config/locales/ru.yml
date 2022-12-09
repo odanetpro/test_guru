@@ -130,12 +130,14 @@ ru:
       test_passed: 'Тест пройден!'
       test_failed: 'Тест не пройден :('
       link_tests: 'К списку тестов'
-    gist:
-      success: '<a href="%{gist_url}" target="_blank">Gist</a> успешно сохранен!'
-      failure: 'Во время сохранения gist произошла ошибка'
     form:
       create_gist_link: 'Сохранить вопрос в gist'
       submit: 'Далее'
+
+  gists:
+    create:
+      success_html: '<a href="%{gist_url}" target="_blank">Gist</a> успешно сохранен!'
+      failure_html: 'Во время сохранения gist произошла ошибка'
   
   shared:
     header:

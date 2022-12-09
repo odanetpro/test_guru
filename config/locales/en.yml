@@ -162,12 +162,14 @@ en:
       test_passed: 'Test passed!'
       test_failed: 'Test failed :('
       link_tests: 'To tests'
-    gist:
-      success: '<a href="%{gist_url}" target="_blank">Gist</a> saved successfully!'
-      failure: 'An error occurred while saving gist'
     form:
       create_gist_link: 'Gist Question'
       submit: 'Next'
+
+  gists:
+    create:
+      success_html: '<a href="%{gist_url}" target="_blank">Gist</a> saved successfully!'
+      failure_html: 'An error occurred while saving gist'
   
   shared:
     header:

@@ -1,22 +1,32 @@
 # frozen_string_literal: true
 
 class GistQuestionService
-  ACCESS_TOKEN = ENV.fetch('GITHUB_TOKEN', nil)
+  ACCESS_TOKEN = ENV.fetch('GITHUB_GIST_TOKEN')
+  CREATED = 201
 
-  def initialize(question, client: nil)
+  Result = Struct.new(:url, :status) do
+    def success?
+      status == CREATED
+    end
+  end
+
+  def initialize(question, client = default_client)
     @question = question
     @test = @question.test
-
-    @client = client || Octokit::Client.new(access_token: ACCESS_TOKEN)
+    @client = client
   end
 
   def call
-    @client.create_gist(gist_params)
-  rescue StandardError
-    false
+    Result.new(@client.create_gist(gist_params).html_url, @client.last_response.status)
+  rescue Octokit::Error => e
+    Result.new(nil, e.response_status)
   end
 
   private
+
+  def default_client
+    Octokit::Client.new(access_token: ACCESS_TOKEN)
+  end
 
   def gist_params
     {
@@ -31,8 +41,6 @@ class GistQuestionService
   end
 
   def gist_content
-    content = [@question.body]
-    content += @question.answers.pluck(:body)
-    content.join("\n")
+    [@question.body, *@question.answers.pluck(:body)].join("\n")
   end
 end
