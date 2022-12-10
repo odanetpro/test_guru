@@ -7,8 +7,8 @@ class GistsController < ApplicationController
     result = GistQuestionService.new(@passing_test.current_question).call
 
     if result.success?
-      Gist.create!(question_id: @passing_test.current_question.id, url: result[:url], user_id: @passing_test.user.id)
-      flash_options = { notice: t('.success_html', gist_url: result[:url]) }
+      Gist.create!(question_id: @passing_test.current_question_id, url: result.url, user_id: @passing_test.user_id)
+      flash_options = { notice: t('.success_html', gist_url: result.url) }
     else
       flash_options = { alert: t('.failure_html') }
     end
