@@ -39,9 +39,15 @@ en:
   validate_messages:
     number_of_answers: 'number of answers exceeded'
 
+  services:
+    gist:
+      description: 'From test: %{test_title}'
+
   admin:
     header:
       admin_panel: 'Admin Panel'
+      all_tests: 'Tests'
+      all_gists: 'Gists'
       
     tests:
       index:
@@ -101,7 +107,14 @@ en:
         link_open: 'Open'
         link_edit: 'Edit'
         link_delete: 'Delete'
-        confirm: 'Are you sure?'       
+        confirm: 'Are you sure?'
+    
+    gists:
+      index:
+        header: 'Github gists'
+        th_question: 'Question'
+        th_url: 'URL'
+        th_email: 'Email'
 
   helpers:
     submit:
@@ -150,7 +163,13 @@ en:
       test_failed: 'Test failed :('
       link_tests: 'To tests'
     form:
+      create_gist_link: 'Gist Question'
       submit: 'Next'
+
+  gists:
+    create:
+      success_html: '<a href="%{gist_url}" target="_blank">Gist</a> saved successfully!'
+      failure_html: 'An error occurred while saving gist'
   
   shared:
     header:

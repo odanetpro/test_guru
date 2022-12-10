@@ -5,6 +5,10 @@
       <%= b.label class: 'ms-1' %>
     </p>
   <% end %>
+  
+  <p class="ms-3">
+    <%= link_to t('.create_gist_link'), passing_test_gists_path(@passing_test), method: :post %>
+  </p>
 
   <%= form.submit t('.submit'), class: 'btn btn-primary' %>
 <% end %>

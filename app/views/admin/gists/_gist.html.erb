@@ -1,0 +1,5 @@
+<tr>
+  <td><%= link_to first_characters(gist.question.body), admin_question_path(gist.question.id) %></td>
+  <td><%= link_to gist_hash(gist.url), gist.url, { target: :blank } %></td>
+  <td><%= gist.user.email %></td>
+</tr>

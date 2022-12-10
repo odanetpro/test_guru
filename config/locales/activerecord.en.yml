@@ -1,0 +1,17 @@
+ru:
+  activerecord:
+    models:
+      test: 'Test'
+      question: 'Question'
+      answer: 'Answer'
+      admin: 'Auth module'
+
+    attributes:
+      test:
+        title: 'Title'
+        level: 'Level'
+        category: 'Category'
+      question:
+        body: 'Body'
+      answer:
+        body: 'Body'

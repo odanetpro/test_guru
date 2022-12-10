@@ -8,9 +8,15 @@ ru:
   validate_messages:
     number_of_answers: 'превышено количество возможных ответов'
 
+  services:
+    gist:
+      description: 'Из теста: %{test_title}'
+
   admin:
     header:
       admin_panel: 'ПАНЕЛЬ АДМИНИСТРАТОРА'
+      all_tests: 'Тесты'
+      all_gists: 'Gists'
       
     tests:
       index:
@@ -70,7 +76,13 @@ ru:
         link_open: 'Открыть'
         link_edit: 'Изменить'
         link_delete: 'Удалить'
-        confirm: 'Вы уверены?'       
+        confirm: 'Вы уверены?'
+    gists:
+      index:
+        header: 'Созданные gists'
+        th_question: 'Вопрос'
+        th_url: 'URL'
+        th_email: 'Email'
 
   helpers:
     submit:
@@ -119,7 +131,13 @@ ru:
       test_failed: 'Тест не пройден :('
       link_tests: 'К списку тестов'
     form:
+      create_gist_link: 'Сохранить вопрос в gist'
       submit: 'Далее'
+
+  gists:
+    create:
+      success_html: '<a href="%{gist_url}" target="_blank">Gist</a> успешно сохранен!'
+      failure_html: 'Во время сохранения gist произошла ошибка'
   
   shared:
     header:

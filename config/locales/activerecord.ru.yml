@@ -4,6 +4,7 @@ ru:
       test: 'Тест'
       question: 'Вопрос'
       answer: 'Ответ'
+      admin: 'Модуль аутентификации'
 
     attributes:
       test:
