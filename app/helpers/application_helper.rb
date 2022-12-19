@@ -22,4 +22,8 @@ module ApplicationHelper
 
     classes[key.to_sym] || classes[:default]
   end
+
+  def current_translations
+    I18n.backend.send(:translations)[I18n.locale]
+  end
 end

@@ -40,7 +40,10 @@ ru:
         link_open: 'Открыть'
         link_edit: 'Изменить'
         link_delete: 'Удалить'
+        link_cancel: 'Отменить'
         confirm: 'Вы уверены?'
+      form_inline:
+        submit: 'OK'
     
     questions:
       show:
