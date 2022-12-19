@@ -1,6 +1,16 @@
 <h2><%= t('.header', test_title: @passing_test.test.title) %></h2>
 
-<p><%= t('.nav', number: @passing_test.current_question_number, count: @passing_test.test.questions.count) %>:</p>
+<div class="mt-4 mb-2"><%= t('.nav', number: @passing_test.current_question_number, count: @passing_test.test.questions.count) %>:</div>
+<div class="progress-bar-base col col-md-4 mb-4">
+  <%= content_tag :div,
+                  class: 'progress-bar-line',
+                  data: {
+                    current_question: @passing_test.current_question_number,
+                    questions_total: @passing_test.test.questions.count
+                  } do%>
+  <% end %>
+</div>
+
 <h3><%= @passing_test.current_question.body %></h3>
 
 <%= render 'form' %>
