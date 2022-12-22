@@ -2,6 +2,7 @@ ru:
   activerecord:
     models:
       test: 'Test'
+      category: 'Category'
       question: 'Question'
       answer: 'Answer'
       admin: 'Auth module'
@@ -11,6 +12,8 @@ ru:
         title: 'Title'
         level: 'Level'
         category: 'Category'
+      category:
+        title: 'Title'
       question:
         body: 'Body'
       answer:

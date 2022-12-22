@@ -2,6 +2,7 @@ ru:
   activerecord:
     models:
       test: 'Тест'
+      category: 'Категория'
       question: 'Вопрос'
       answer: 'Ответ'
       admin: 'Модуль аутентификации'
@@ -11,6 +12,8 @@ ru:
         title: 'Название'
         level: 'Сложность'
         category: 'Категория'
+      category:
+        title: 'Название'
       question:
         body: 'Текст вопроса'
       answer:
