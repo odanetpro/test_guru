@@ -71,7 +71,10 @@ en:
         link_open: 'Open'
         link_edit: 'Edit'
         link_delete: 'Delete'
+        link_cancel: 'Cancel'
         confirm: 'Are you sure?'
+      form_inline:
+        submit: 'OK'
     
     questions:
       show:

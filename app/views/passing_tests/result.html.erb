@@ -3,14 +3,14 @@
 <% if @passing_test.sucsessful? %>
   <p>
     <strong><%= t('.right_questions') %>: </strong>
-    <span style="color: green"><%= @passing_test.success_rate %>%</span>
+    <span style="color: green"><%= @passing_test.success_rate.round(2) %>%</span>
   </p>
 
   <p><%= t('.test_passed') %></p>
 <% else %>
   <p>
     <strong><%= t('.right_questions') %>: </strong>
-    <span style="color: red"><%= @passing_test.success_rate %>%</span>
+    <span style="color: red"><%= @passing_test.success_rate.round(2) %>%</span>
   </p>
 
   <p><%= t('.test_failed') %></p>
