@@ -28,6 +28,8 @@ Rails.application.routes.draw do
   end
 
   namespace :admin do
+    resources :categories
+
     resources :tests do
       patch :update_inline, on: :member
 
