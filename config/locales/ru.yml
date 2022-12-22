@@ -141,7 +141,20 @@ ru:
     create:
       success_html: '<a href="%{gist_url}" target="_blank">Gist</a> успешно сохранен!'
       failure_html: 'Во время сохранения gist произошла ошибка'
-  
+
+  feedbacks:
+    new:
+      header: 'Отправить отзыв'
+    create:
+      success: 'Отзыв успешно отправлен администратору'
+      feedback_is_blank: 'Отзыв не может быть пустым!'
+    form:
+      submit: 'Отправить'
+
+  feedbacks_mailer:
+    user_feedback:
+      subject: 'Новый отзыв'
+
   shared:
     header:
       login: "Войти"

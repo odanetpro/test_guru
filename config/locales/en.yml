@@ -174,6 +174,19 @@ en:
       success_html: '<a href="%{gist_url}" target="_blank">Gist</a> saved successfully!'
       failure_html: 'An error occurred while saving gist'
   
+  feedbacks:
+    new:
+      header: 'Feedback'
+    create:
+      success: 'Feedback successfully sent to administrator'
+      feedback_is_blank: 'Feedback cannot be blank!'
+    form:
+      submit: 'Send'
+
+  feedbacks_mailer:
+    user_feedback:
+      subject: 'New feedback'
+
   shared:
     header:
       login: "Log in"
