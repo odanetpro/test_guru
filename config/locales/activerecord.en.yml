@@ -6,6 +6,7 @@ ru:
       question: 'Question'
       answer: 'Answer'
       admin: 'Auth module'
+      user: 'Guru profile'
 
     attributes:
       test:
@@ -18,3 +19,7 @@ ru:
         body: 'Body'
       answer:
         body: 'Body'
+      user:
+        password: 'Password'
+        password_confirmation: 'Password confirmation'
+        current_password: 'Current password'        

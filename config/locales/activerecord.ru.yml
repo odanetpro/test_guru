@@ -6,6 +6,7 @@ ru:
       question: 'Вопрос'
       answer: 'Ответ'
       admin: 'Модуль аутентификации'
+      user: 'Профиль Гуру'
 
     attributes:
       test:
@@ -18,3 +19,7 @@ ru:
         body: 'Текст вопроса'
       answer:
         body: 'Текст ответа'
+      user:
+        password: 'Пароль'
+        password_confirmation: 'Подтверждение пароля'
+        current_password: 'Текущий пароль'

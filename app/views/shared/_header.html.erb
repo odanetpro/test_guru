@@ -26,7 +26,7 @@
             
           <span class="navbar-text">
             <% if user_signed_in? %>
-              <%= t('general.greetings_html', name: current_user.name) %> |
+              <%= t('general.greetings_html', name: (link_to current_user.name, edit_user_registration_path) ) %> |
               <%= link_to t('general.link_logout'), destroy_user_session_path, method: :delete %>
             <% else %>
               <%= link_to t('.login'), new_session_path(resource_name) %> |
