@@ -69,10 +69,10 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
     address: 'smtp.yandex.ru',
     port: 465,
+    authentication: 'plain',
     user_name: ENV.fetch('SMTP_USERNAME'),
     password: ENV.fetch('SMTP_PASSWORD'),
-    authentication: 'plain',
-    enable_starttls_auto: true
+    tls: true
   }
 
   # Ignore bad email addresses and do not raise email delivery errors.
