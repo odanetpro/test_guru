@@ -2,9 +2,11 @@
 
 <p><%= link_to t('.link_new_category'), new_admin_category_path %></p>
 
-<table class="table table-striped">
-  <th><%= t('.th_title') %></th>
-  <th colspan="3"><%= t('.th_actions') %></th>
+<div class="table-responsive-sm">
+  <table class="table table-striped">
+    <th><%= t('.th_title') %></th>
+    <th colspan="3"><%= t('.th_actions') %></th>
 
-  <%= render @categories %>
-</table>
+    <%= render @categories %>
+  </table>
+</div>  
