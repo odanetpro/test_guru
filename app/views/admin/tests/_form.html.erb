@@ -3,15 +3,15 @@
 
   <p>
     <%= form.label :title %><br>
-    <%= form.text_field :title %>
+    <%= form.text_field :title, class: "form-control"  %>
   </p>
   <p>
     <%= form.label :level %><br>
-    <%= form.text_field :level %>
+    <%= form.text_field :level, class: "form-control"  %>
   </p>
   <p>
     <%= form.label :category_id %>:<br>
-    <%= form.collection_select :category_id, all_categories, :id, :title, { prompt: true }, { class: 'p-1' } %>
+    <%= form.collection_select :category_id, all_categories, :id, :title, { prompt: true }, { class: 'form-select p-1' } %>
   </p>
 
   <p><%= form.submit class: 'btn btn-primary' %></p>
