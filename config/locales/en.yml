@@ -48,6 +48,7 @@ en:
       admin_panel: 'Admin Panel'
       all_tests: 'Tests'
       all_gists: 'Gists'
+      all_categories: 'Categories'
       
     tests:
       index:
@@ -75,7 +76,26 @@ en:
         confirm: 'Are you sure?'
       form_inline:
         submit: 'OK'
-    
+
+    categories:
+      index:
+        header: 'Categories'
+        link_new_category: 'New category'
+        th_title: 'Title'
+        th_actions: 'Actions'
+      show:
+        header: 'Category'
+        link_categories: 'To categories'
+      new:
+        header: 'Create category'
+      edit:
+        header: 'Edit category'
+      category:
+        link_open: 'Open'
+        link_edit: 'Edit'
+        link_delete: 'Delete'
+        confirm: 'Are you sure?'
+            
     questions:
       show:
         header: '"%{test}" question'
@@ -124,6 +144,9 @@ en:
       test:
         create: 'Save'
         update: 'Save'
+      category:
+        create: 'Save'
+        update: 'Save'
       question:
         create: 'Save'
         update: 'Save'
@@ -136,6 +159,8 @@ en:
         title: 'Title'
         level: 'Level'
         category_id: 'Category'
+      category:
+        title: 'Title'
       question:
         body: 'Body'
       answer:
@@ -174,6 +199,19 @@ en:
       success_html: '<a href="%{gist_url}" target="_blank">Gist</a> saved successfully!'
       failure_html: 'An error occurred while saving gist'
   
+  feedbacks:
+    new:
+      header: 'Feedback'
+    create:
+      success: 'Feedback successfully sent to administrator'
+      feedback_is_blank: 'Feedback cannot be blank!'
+    form:
+      submit: 'Send'
+
+  feedbacks_mailer:
+    user_feedback:
+      subject: 'New feedback'
+
   shared:
     header:
       login: "Log in"

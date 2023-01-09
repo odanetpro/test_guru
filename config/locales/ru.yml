@@ -17,6 +17,7 @@ ru:
       admin_panel: 'ПАНЕЛЬ АДМИНИСТРАТОРА'
       all_tests: 'Тесты'
       all_gists: 'Gists'
+      all_categories: 'Категории'
       
     tests:
       index:
@@ -44,6 +45,25 @@ ru:
         confirm: 'Вы уверены?'
       form_inline:
         submit: 'OK'
+
+    categories:
+      index:
+        header: 'Список категорий'
+        link_new_category: 'Новая категория'
+        th_title: 'Название'
+        th_actions: 'Действия'
+      show:
+        header: 'Категория'
+        link_categories: 'К списку категорий'
+      new:
+        header: 'Создать категорию'
+      edit:
+        header: 'Редактировать категорию'
+      category:
+        link_open: 'Открыть'
+        link_edit: 'Изменить'
+        link_delete: 'Удалить'
+        confirm: Вы уверены?'
     
     questions:
       show:
@@ -92,6 +112,9 @@ ru:
       test:
         create: 'Сохранить'
         update: 'Сохранить'
+      category:
+        create: 'Сохранить'
+        update: 'Сохранить'
       question:
         create: 'Сохранить'
         update: 'Сохранить'
@@ -104,6 +127,8 @@ ru:
         title: 'Название'
         level: 'Сложность'
         category_id: 'Категория'
+      category:
+        title: 'Название'
       question:
         body: 'Текст вопроса'
       answer:
@@ -141,7 +166,20 @@ ru:
     create:
       success_html: '<a href="%{gist_url}" target="_blank">Gist</a> успешно сохранен!'
       failure_html: 'Во время сохранения gist произошла ошибка'
-  
+
+  feedbacks:
+    new:
+      header: 'Отправить отзыв'
+    create:
+      success: 'Отзыв успешно отправлен администратору'
+      feedback_is_blank: 'Отзыв не может быть пустым!'
+    form:
+      submit: 'Отправить'
+
+  feedbacks_mailer:
+    user_feedback:
+      subject: 'Новый отзыв'
+
   shared:
     header:
       login: "Войти"

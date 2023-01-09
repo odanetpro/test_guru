@@ -1,9 +1,11 @@
 <h2><%= t('.header') %></h2>
 
-<table class="table table-striped">
-  <th><%= t('.th_question') %></th>
-  <th><%= t('.th_url') %></th>
-  <th><%= t('.th_email') %></th>
+<div class="table-responsive-sm">
+  <table class="table table-striped">
+    <th><%= t('.th_question') %></th>
+    <th><%= t('.th_url') %></th>
+    <th><%= t('.th_email') %></th>
 
-  <%= render @gists %>
-</table>
+    <%= render @gists %>
+  </table>
+</div>

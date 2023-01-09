@@ -1,0 +1,16 @@
+<tr>
+    <td class="align-middle">
+      <%= category.title %>
+    </td>
+    <td class="align-middle">
+      <%= link_to t('.link_open'), admin_category_path(category) %>
+    </td>
+    <td  class="align-middle">
+      <%= link_to t('.link_edit'), edit_admin_category_path(category) %>
+    </td>
+    <td  class="align-middle"><%= link_to t('.link_delete'),
+                                        admin_category_path(category),
+                                        method: :delete,
+                                        data: { confirm: t('.confirm') } %>
+    </td>
+</tr>

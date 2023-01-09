@@ -4,11 +4,13 @@
 
 <p><%= link_to t('.link_new_test'), new_admin_test_path %></p>
 
-<table class="table table-striped">
-  <th><%= t('.th_title') %></th>
-  <th><%= t('.th_level') %></th>
-  <th><%= t('.th_amount') %></th>
-  <th colspan="3"><%= t('.th_actions') %></th>
+<div class="table-responsive-sm">
+  <table class="table table-striped">
+    <th><%= t('.th_title') %></th>
+    <th><%= t('.th_level') %></th>
+    <th><%= t('.th_amount') %></th>
+    <th colspan="3"><%= t('.th_actions') %></th>
 
-  <%= render @tests %>
-</table>
+    <%= render @tests %>
+  </table>
+</div>

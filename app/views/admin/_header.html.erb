@@ -1,9 +1,13 @@
 <header>
   <nav class="navbar navbar-dark navbar-expand-lg p-3 mb-5" style="background-color: rgba(72, 170, 242);">
     <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerTestGuru" aria-controls="navbarTogglerTestGuru" aria-expanded="false" aria-label="Переключатель навигации">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
       <strong><%= link_to t('general.app_title'), root_path, class: 'navbar-brand' %></strong>
       
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="collapse navbar-collapse" id="navbarTogglerTestGuru">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item mt-2">
             <span class="navbar-text"><%= t('.admin_panel') %></span>
@@ -12,16 +16,33 @@
             <a class="nav-link active" aria-current="page" href="<%= admin_tests_path %>"><%= t('.all_tests') %></a>
           </li>
           <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="<%= admin_categories_path %>"><%= t('.all_categories') %></a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="<%= admin_gists_path %>"><%= t('.all_gists') %></a>
           </li>
         </ul>
       
-        <span class="navbar-text">
-          <% if user_signed_in? %>
-            <%= t('general.greetings_html', name: current_user.name) %> | 
-            <%= link_to t('general.link_logout'), destroy_user_session_path, method: :delete %>
-          <% end %>
-        </span>
+        <div>
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                EN | RU
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                <li><a class="dropdown-item" href="?lang=en">En</a></li>
+                <li><a class="dropdown-item" href="?lang=ru">Ru</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+          <span class="navbar-text">
+            <% if user_signed_in? %>
+              <%= t('general.greetings_html', name: (link_to current_user.name, edit_user_registration_path) ) %> | 
+              <%= link_to t('general.link_logout'), destroy_user_session_path, method: :delete %>
+            <% end %>
+          </span>
       </div>
     </div>
   </nav>

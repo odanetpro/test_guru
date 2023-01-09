@@ -2,16 +2,24 @@ ru:
   activerecord:
     models:
       test: 'Тест'
+      category: 'Категория'
       question: 'Вопрос'
       answer: 'Ответ'
       admin: 'Модуль аутентификации'
+      user: 'Профиль Гуру'
 
     attributes:
       test:
         title: 'Название'
         level: 'Сложность'
         category: 'Категория'
+      category:
+        title: 'Название'
       question:
         body: 'Текст вопроса'
       answer:
         body: 'Текст ответа'
+      user:
+        password: 'Пароль'
+        password_confirmation: 'Подтверждение пароля'
+        current_password: 'Текущий пароль'

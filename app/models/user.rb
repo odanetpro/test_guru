@@ -17,6 +17,8 @@ class User < ApplicationRecord
   has_many :gists, dependent: :destroy
   has_many :questions, through: :gists
 
+  scope :admins, -> { where(type: 'Admin') }
+
   def list_of_tests(level)
     Test.joins(:passing_tests)
         .where(level: level, passing_tests: { user_id: id })
@@ -28,5 +30,9 @@ class User < ApplicationRecord
 
   def admin?
     is_a?(Admin)
+  end
+
+  def self.admin_emails
+    User.admins.pluck(:email)
   end
 end

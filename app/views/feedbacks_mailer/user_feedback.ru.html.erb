@@ -1,0 +1,12 @@
+<p>Поступил новый отзыв с сайта <%= link_to t('general.app_title'), root_url %></p>
+
+<p>
+  <b>Пользователь:</b><br>
+  Имя: <%= @user.name %><br>
+  Email: <%= @user.email %><br>
+</p>
+
+<p>
+  <b>Текст сообщения:</b><br>
+  <%= @message %>
+</p>
