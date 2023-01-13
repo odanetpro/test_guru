@@ -5,7 +5,9 @@ class PassingTestsController < ApplicationController
 
   def show; end
 
-  def result; end
+  def result
+    @passing_test.set_passed! if @passing_test.sucsessful?
+  end
 
   def update
     @passing_test.accept!(params[:answer_ids])

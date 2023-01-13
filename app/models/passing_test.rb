@@ -26,6 +26,11 @@ class PassingTest < ApplicationRecord
     self.correct_questions * 100.0 / self.test.questions.count
   end
 
+  def set_passed!
+    self.passed = true
+    save!
+  end
+
   private
 
   def before_validation_set_current_question
