@@ -1,0 +1,16 @@
+<tr>
+    <td class="align-middle">
+      <%= badge.title %>
+    </td>
+    <td class="align-middle">
+      <%= link_to t('.link_open'), admin_badge_path(badge) %>
+    </td>
+    <td  class="align-middle">
+      <%= link_to t('.link_edit'), edit_admin_badge_path(badge) %>
+    </td>
+    <td  class="align-middle"><%= link_to t('.link_delete'),
+                                        admin_badge_path(badge),
+                                        method: :delete,
+                                        data: { confirm: t('.confirm') } %>
+    </td>    
+</tr>

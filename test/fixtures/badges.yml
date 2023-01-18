@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  image: MyString
+  criterion_level: 1
+  criterion_category: one
+  criterion_alone: false
+  criterion_first_try: false
+
+two:
+  title: MyString
+  image: MyString
+  criterion_level: 1
+  criterion_category: two
+  criterion_alone: false
+  criterion_first_try: false
