@@ -1,12 +1,23 @@
 <h2><%= t('.header', test_title: @passing_test.test.title) %></h2>
 
-<% if @passing_test.sucsessful? %>
+<% if @passing_test.passed? %>
   <p>
     <strong><%= t('.right_questions') %>: </strong>
     <span style="color: green"><%= @passing_test.success_rate.round(2) %>%</span>
   </p>
 
   <p><%= t('.test_passed') %></p>
+
+  <% @badges&.each do |badge| %>
+    <p>
+      <%= t('.you_received_award') %>: <b><%= badge.title %>!</b>
+      <div class="mt-2">
+        <a href="<%= badge_path(badge) %>">
+          <%= badge_image(badge) %>
+        </a>
+      </div>
+    </p>
+  <% end %>
 <% else %>
   <p>
     <strong><%= t('.right_questions') %>: </strong>
