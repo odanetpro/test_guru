@@ -31,6 +31,10 @@ class PassingTest < ApplicationRecord
     save!
   end
 
+  def passed?
+    passed
+  end
+
   private
 
   def before_validation_set_current_question
