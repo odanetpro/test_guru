@@ -6,7 +6,15 @@ class PassingTestsController < ApplicationController
   def show; end
 
   def result
-    @passing_test.set_passed! if @passing_test.sucsessful?
+    return if @passing_test.passed? || !@passing_test.sucsessful?
+
+    @passing_test.set_passed!
+
+    @badges = []
+    Badge.all.each do |badge|
+      @badges << badge if badge.award?(user: @passing_test.user, test: @passing_test.test) &&
+                          Award.create!(user_id: current_user.id, badge_id: badge.id)
+    end
   end
 
   def update
