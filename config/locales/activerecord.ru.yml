@@ -7,6 +7,7 @@ ru:
       answer: 'Ответ'
       admin: 'Модуль аутентификации'
       user: 'Профиль Гуру'
+      badge: 'Значек'
 
     attributes:
       test:
@@ -23,3 +24,5 @@ ru:
         password: 'Пароль'
         password_confirmation: 'Подтверждение пароля'
         current_password: 'Текущий пароль'
+      badge:
+        image_url: 'Ссылка на изображение'

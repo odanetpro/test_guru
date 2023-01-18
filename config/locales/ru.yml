@@ -7,6 +7,17 @@ ru:
   
   validate_messages:
     number_of_answers: 'превышено количество возможных ответов'
+    badge_uniqueness: 'значек с таким набором критериев уже существует'
+    badge_invalid_rule: 'правило с таким набором критериев недопустимо'
+
+  badge:
+    rule:
+      base_text: 'Выдать значек после успешного прохождения'
+      alone_test: 'теста'
+      all_tests: 'всех тестов'
+      level: 'уровня'
+      category: 'категории'
+      first_try: 'c первой попытки'
 
   services:
     gist:
@@ -18,6 +29,7 @@ ru:
       all_tests: 'Тесты'
       all_gists: 'Gists'
       all_categories: 'Категории'
+      all_badges: 'Значки'
       
     tests:
       index:
@@ -106,6 +118,27 @@ ru:
         th_question: 'Вопрос'
         th_url: 'URL'
         th_email: 'Email'
+    badges:
+      index:
+        header: 'Список значков'
+        link_new_badge: 'Новый значек'
+        th_title: 'Название'
+        th_actions: 'Действия'
+      show:
+        rule: 'Правило выдачи'
+        link_badges: 'К списку значков'
+      new:
+        header: 'Создать значек'
+      edit:
+        header: 'Редактировать значек'
+      badge:
+        link_open: 'Открыть'
+        link_edit: 'Изменить'
+        link_delete: 'Удалить'
+        confirm: Вы уверены?'
+      form:
+        rule: 'Правило выдачи значка'
+        rule_text: 'Выдать значек после успешного прохождения'
 
   helpers:
     submit:
@@ -121,6 +154,9 @@ ru:
       answer:
         create: 'Сохранить'
         update: 'Сохранить'
+      badge:
+        create: 'Сохранить'
+        update: 'Сохранить'
 
     label:
       test:
@@ -134,6 +170,13 @@ ru:
       answer:
         body: 'Текст ответа'
         correct: 'правильный ответ'
+      badge:
+        title: 'Название'
+        image_url: 'Ссылка на изображение'
+        criterion_alone: 'теста (или всех тестов если не отмечено)'
+        criterion_level: 'сложности (можно оставить пустым)'
+        criterion_category_id: 'категории (можно оставить пустым)'
+        criterion_first_try: 'с первой попытки'
     
     select:
       prompt: 'Выберите пожалуйста'
@@ -152,12 +195,14 @@ ru:
     show:
       header: 'Прохождение теста "%{test_title}"'
       nav: 'Вопрос %{number} из %{count}'
+      test_complited: 'Тест завершен'
     result:
       header: 'Тест %{test_title} завершен!'
       right_questions: 'Правильных ответов'
       test_passed: 'Тест пройден!'
       test_failed: 'Тест не пройден :('
       link_tests: 'К списку тестов'
+      you_received_award: 'Вы получили награду'
     form:
       create_gist_link: 'Сохранить вопрос в gist'
       submit: 'Далее'
@@ -179,6 +224,19 @@ ru:
   feedbacks_mailer:
     user_feedback:
       subject: 'Новый отзыв'
+
+  badges:
+    index:
+      header: 'Список значков'
+      th_title: 'Название'
+    show:
+      rule: 'Правило выдачи'
+      link_badges: 'К списку значков'
+
+  awards:
+    index:
+      header: 'Мои награды'
+      link_badges: 'Все доступные значки'
 
   shared:
     header:
