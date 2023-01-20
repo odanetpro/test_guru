@@ -5,19 +5,11 @@ ru:
     admin_required: 'Вы не авторизованы для просмотра этой страницы!'
     link_logout: 'Выйти'
   
-  validate_messages:
-    number_of_answers: 'превышено количество возможных ответов'
-    badge_uniqueness: 'значек с таким набором критериев уже существует'
-    badge_invalid_rule: 'правило с таким набором критериев недопустимо'
-
   badge:
     rule:
-      base_text: 'Выдать значек после успешного прохождения'
-      alone_test: 'теста'
-      all_tests: 'всех тестов'
-      level: 'уровня'
-      category: 'категории'
-      first_try: 'c первой попытки'
+      passing_all_tests_from_category: 'Выдать бэйдж после успешного прохождения всех тестов из заданной категории'
+      passing_test_on_a_given_attempt: 'Выдавать бейдж после успешного прохождения теста с заданной попытки'
+      passing_all_tests_of_level: 'Выдать бэйдж после успешного прохождения всех тестов заданного уровня'
 
   services:
     gist:
@@ -138,7 +130,6 @@ ru:
         confirm: Вы уверены?'
       form:
         rule: 'Правило выдачи значка'
-        rule_text: 'Выдать значек после успешного прохождения'
 
   helpers:
     submit:
@@ -173,10 +164,8 @@ ru:
       badge:
         title: 'Название'
         image_url: 'Ссылка на изображение'
-        criterion_alone: 'теста (или всех тестов если не отмечено)'
-        criterion_level: 'сложности (можно оставить пустым)'
-        criterion_category_id: 'категории (можно оставить пустым)'
-        criterion_first_try: 'с первой попытки'
+        rule: 'Правило'
+        rule_criterion_value: 'Критерий'
     
     select:
       prompt: 'Выберите пожалуйста'

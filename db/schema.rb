@@ -36,14 +36,11 @@ ActiveRecord::Schema.define(version: 2023_01_13_031631) do
   create_table "badges", force: :cascade do |t|
     t.string "title", null: false
     t.string "image_url", null: false
-    t.integer "criterion_level"
-    t.bigint "criterion_category_id"
-    t.boolean "criterion_alone"
-    t.boolean "criterion_first_try"
+    t.integer "rule", null: false
+    t.string "rule_criterion_value", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["criterion_category_id"], name: "index_badges_on_criterion_category_id"
-    t.index ["criterion_level", "criterion_category_id", "criterion_alone", "criterion_first_try"], name: "index_badge_rule_uniqueness", unique: true
+    t.index ["rule", "rule_criterion_value"], name: "index_badges_on_rule_and_rule_criterion_value", unique: true
   end
 
   create_table "categories", force: :cascade do |t|
@@ -125,7 +122,6 @@ ActiveRecord::Schema.define(version: 2023_01_13_031631) do
   add_foreign_key "answers", "questions"
   add_foreign_key "awards", "badges"
   add_foreign_key "awards", "users"
-  add_foreign_key "badges", "categories", column: "criterion_category_id"
   add_foreign_key "gists", "questions"
   add_foreign_key "gists", "users"
   add_foreign_key "passing_tests", "questions", column: "current_question_id"

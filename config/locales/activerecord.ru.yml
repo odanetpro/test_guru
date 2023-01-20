@@ -25,4 +25,18 @@ ru:
         password_confirmation: 'Подтверждение пароля'
         current_password: 'Текущий пароль'
       badge:
+        title: 'Название'
         image_url: 'Ссылка на изображение'
+        rule: 'Правило'
+        rule_criterion_value: 'Критерий'
+  
+    errors:
+      models:
+        badge:
+          attributes:
+            base:
+              badge_invalid_rule: 'Правило не существует'
+        answer:
+          attributes:
+            base:
+              number_of_answers: 'Превышено количество возможных ответов'

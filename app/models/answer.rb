@@ -11,6 +11,6 @@ class Answer < ApplicationRecord
   private
 
   def validate_number_of_answers
-    errors.add(:base, I18n.t('validate_messages.number_of_answers')) if question.answers.count >= 4
+    errors.add(:base, :number_of_answers) if question.answers.count >= 4
   end
 end

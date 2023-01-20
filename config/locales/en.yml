@@ -36,19 +36,11 @@ en:
     admin_required: 'You are not authorized to view this page!'
     link_logout: 'Log out'
   
-  validate_messages:
-    number_of_answers: 'number of answers exceeded'
-    badge_uniqueness: 'a badge with this set of criteria already exists'
-    badge_invalid_rule: 'a rule with such a set of criteria is unacceptable'
-
   badge:
     rule:
-      base_text: 'Issue a badge after successfully passing'
-      alone_test: 'the test'
-      all_tests: 'all tests'
-      level: 'where the level is'
-      category: 'where the category is'
-      first_try: 'on the first try'
+      passing_all_tests_from_category: 'Issue a badge after successfully passing all tests from a given category'
+      passing_test_on_a_given_attempt: 'Issue a badge after successfully passing the test on a given attempt'
+      passing_all_tests_of_level: 'Issue a badge after successfully passing all tests of a given level'
 
   services:
     gist:
@@ -170,7 +162,6 @@ en:
         confirm: Are you sure?'
       form:
         rule: 'Badge Rule'
-        rule_text: 'Issue a badge after passing'
 
   helpers:
     submit:
@@ -205,10 +196,9 @@ en:
       badge:
         title: 'Title'
         image_url: 'Image link'
-        criterion_alone: 'a test (or all tests if unchecked)'
-        criterion_level: 'level (can be blank)'
-        criterion_category_id: 'category (can be blank))'
-        criterion_first_try: 'on the first try'
+        rule: 'Rule'
+        rule_criterion_value: 'Criterion'
+
     
     select:
       prompt: 'Please select'

@@ -25,5 +25,18 @@ ru:
         password_confirmation: 'Password confirmation'
         current_password: 'Current password'
       badge:
+        title: 'Title'
         image_url: 'Image url'
+        rule: 'Rule'
+        rule_criterion_value: 'Criterion'
 
+    errors:
+      models:
+        badge:
+          attributes:
+            base:
+              badge_invalid_rule: 'The rule does not exist'
+        answer:
+          attributes:
+            base:
+              number_of_answers: 'Number of answers exceeded'

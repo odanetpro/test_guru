@@ -10,29 +10,17 @@
       <%= form.text_field :image_url, class: 'form-control' %>
     </p>
 
-  <h4 class="my-4"><%= t('.rule') %></h4>
+  <h4 class="mt-4 mb-3"><%= t('.rule') %></h4>
+  
   <p>
-    <span style="color: gray"><b><%= t('.rule_text') %></b></span>
+    <%= form.label :rule %><br>
+    <%= form.select :rule, rules_collection, { prompt: true }, { class: 'form-select p-1' } %>
   </p>
 
-    <p>
-      <%= form.check_box :criterion_alone, class: 'form-check-input' %>
-      <%= form.label :criterion_alone, class: 'form-check-label ms-1' %><br>
-    </p>
-
-    <p>
-      <%= form.label :criterion_level %><br>
-      <%= form.text_field :criterion_level, class: "form-control"  %>
-    </p>
-    <p>
-      <%= form.label :criterion_category_id %><br>
-      <%= form.collection_select :criterion_category_id, all_categories, :id, :title, { prompt: true }, { class: 'form-select p-1' } %>
-    </p>
-
-    <p>
-      <%= form.check_box :criterion_first_try, class: 'form-check-input' %>
-      <%= form.label :criterion_first_try, class: 'form-check-label ms-1' %><br>
-    </p>
+  <p>
+    <%= form.label :rule_criterion_value %><br>
+    <%= form.text_field :rule_criterion_value, class: "form-control"  %>
+  </p>
   
   <p><%= form.submit class: 'btn btn-primary' %></p>
 <% end %>
