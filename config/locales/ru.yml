@@ -5,8 +5,11 @@ ru:
     admin_required: 'Вы не авторизованы для просмотра этой страницы!'
     link_logout: 'Выйти'
   
-  validate_messages:
-    number_of_answers: 'превышено количество возможных ответов'
+  badge:
+    rule:
+      passing_all_tests_from_category: 'Выдать бэйдж после успешного прохождения всех тестов из заданной категории'
+      passing_test_on_a_given_attempt: 'Выдавать бейдж после успешного прохождения теста с заданной попытки'
+      passing_all_tests_of_level: 'Выдать бэйдж после успешного прохождения всех тестов заданного уровня'
 
   services:
     gist:
@@ -18,6 +21,7 @@ ru:
       all_tests: 'Тесты'
       all_gists: 'Gists'
       all_categories: 'Категории'
+      all_badges: 'Значки'
       
     tests:
       index:
@@ -106,6 +110,26 @@ ru:
         th_question: 'Вопрос'
         th_url: 'URL'
         th_email: 'Email'
+    badges:
+      index:
+        header: 'Список значков'
+        link_new_badge: 'Новый значек'
+        th_title: 'Название'
+        th_actions: 'Действия'
+      show:
+        rule: 'Правило выдачи'
+        link_badges: 'К списку значков'
+      new:
+        header: 'Создать значек'
+      edit:
+        header: 'Редактировать значек'
+      badge:
+        link_open: 'Открыть'
+        link_edit: 'Изменить'
+        link_delete: 'Удалить'
+        confirm: Вы уверены?'
+      form:
+        rule: 'Правило выдачи значка'
 
   helpers:
     submit:
@@ -121,6 +145,9 @@ ru:
       answer:
         create: 'Сохранить'
         update: 'Сохранить'
+      badge:
+        create: 'Сохранить'
+        update: 'Сохранить'
 
     label:
       test:
@@ -134,6 +161,11 @@ ru:
       answer:
         body: 'Текст ответа'
         correct: 'правильный ответ'
+      badge:
+        title: 'Название'
+        image_url: 'Ссылка на изображение'
+        rule: 'Правило'
+        rule_criterion_value: 'Критерий'
     
     select:
       prompt: 'Выберите пожалуйста'
@@ -152,12 +184,14 @@ ru:
     show:
       header: 'Прохождение теста "%{test_title}"'
       nav: 'Вопрос %{number} из %{count}'
+      test_complited: 'Тест завершен'
     result:
       header: 'Тест %{test_title} завершен!'
       right_questions: 'Правильных ответов'
       test_passed: 'Тест пройден!'
       test_failed: 'Тест не пройден :('
       link_tests: 'К списку тестов'
+      you_received_award: 'Вы получили награду'
     form:
       create_gist_link: 'Сохранить вопрос в gist'
       submit: 'Далее'
@@ -179,6 +213,19 @@ ru:
   feedbacks_mailer:
     user_feedback:
       subject: 'Новый отзыв'
+
+  badges:
+    index:
+      header: 'Список значков'
+      th_title: 'Название'
+    show:
+      rule: 'Правило выдачи'
+      link_badges: 'К списку значков'
+
+  awards:
+    index:
+      header: 'Мои награды'
+      link_badges: 'Все доступные значки'
 
   shared:
     header:

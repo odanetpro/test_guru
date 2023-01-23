@@ -36,8 +36,11 @@ en:
     admin_required: 'You are not authorized to view this page!'
     link_logout: 'Log out'
   
-  validate_messages:
-    number_of_answers: 'number of answers exceeded'
+  badge:
+    rule:
+      passing_all_tests_from_category: 'Issue a badge after successfully passing all tests from a given category'
+      passing_test_on_a_given_attempt: 'Issue a badge after successfully passing the test on a given attempt'
+      passing_all_tests_of_level: 'Issue a badge after successfully passing all tests of a given level'
 
   services:
     gist:
@@ -49,6 +52,7 @@ en:
       all_tests: 'Tests'
       all_gists: 'Gists'
       all_categories: 'Categories'
+      all_badges: 'Badges'
       
     tests:
       index:
@@ -138,6 +142,26 @@ en:
         th_question: 'Question'
         th_url: 'URL'
         th_email: 'Email'
+    badges:
+      index:
+        header: 'Badges'
+        link_new_badge: 'New badge'
+        th_title: 'Title'
+        th_actions: 'Actions'
+      show:
+        rule: 'Rule'
+        link_badges: 'To badges'
+      new:
+        header: 'Create badge'
+      edit:
+        header: 'Edit badge'
+      badge:
+        link_open: 'Open'
+        link_edit: 'Edit'
+        link_delete: 'Delete'
+        confirm: Are you sure?'
+      form:
+        rule: 'Badge Rule'
 
   helpers:
     submit:
@@ -153,6 +177,9 @@ en:
       answer:
         create: 'Save'
         update: 'Save'
+      badge:
+        create: 'Save'
+        update: 'Save'
 
     label:
       test:
@@ -166,6 +193,12 @@ en:
       answer:
         body: 'Body'
         correct: 'correct'
+      badge:
+        title: 'Title'
+        image_url: 'Image link'
+        rule: 'Rule'
+        rule_criterion_value: 'Criterion'
+
     
     select:
       prompt: 'Please select'
@@ -184,12 +217,14 @@ en:
     show:
       header: 'Passing "%{test_title}" test'
       nav: 'Question %{number} from %{count}'
+      test_complited: 'Test complited'
     result:
       header: 'Test %{test_title} completed!'
       right_questions: 'Correct answers'
       test_passed: 'Test passed!'
       test_failed: 'Test failed :('
       link_tests: 'To tests'
+      you_received_award: 'You have received an award'
     form:
       create_gist_link: 'Gist Question'
       submit: 'Next'
@@ -211,6 +246,19 @@ en:
   feedbacks_mailer:
     user_feedback:
       subject: 'New feedback'
+
+  badges:
+    index:
+      header: 'Badges'
+      th_title: 'Title'
+    show:
+      rule: 'Rule'
+      link_badges: 'To badges'
+
+  awards:
+    index:
+      header: 'My awards'
+      link_badges: 'All available badges'
 
   shared:
     header:

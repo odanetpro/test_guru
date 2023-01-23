@@ -10,7 +10,7 @@
     <%= form.text_field :level, class: "form-control"  %>
   </p>
   <p>
-    <%= form.label :category_id %>:<br>
+    <%= form.label :category_id %><br>
     <%= form.collection_select :category_id, all_categories, :id, :title, { prompt: true }, { class: 'form-select p-1' } %>
   </p>
 

@@ -16,6 +16,8 @@ class User < ApplicationRecord
   has_many :author_of_tests, class_name: 'Test', foreign_key: 'author_id', dependent: :destroy
   has_many :gists, dependent: :destroy
   has_many :questions, through: :gists
+  has_many :awards, dependent: :destroy
+  has_many :badges, through: :awards
 
   scope :admins, -> { where(type: 'Admin') }
 

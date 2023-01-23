@@ -1,0 +1,13 @@
+<h2><%= @badge.title %></h2>
+
+<div class="callout">
+  <b><%= t('.rule') %>:</b><br>
+  <%= rule_text(@badge) %>
+</div>
+<div>
+  <%= badge_image(@badge) %>
+</div>
+
+<div class="my-3">
+  <%= link_to t('.link_badges'), admin_badges_path %>
+</div>
