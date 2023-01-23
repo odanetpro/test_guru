@@ -15,7 +15,7 @@ class PassingTestsController < ApplicationController
       if @passing_test.sucsessful?
         @passing_test.set_passed!
 
-        result = BadgesAwardService.new(@passing_test.user, @passing_test.test).call
+        result = BadgesAwardService.new(@passing_test).call
         badges_ids = result.badges_ids if result.success?
       end
 
