@@ -14,6 +14,7 @@ ru:
         title: 'Название'
         level: 'Сложность'
         category: 'Категория'
+        time_to_pass: 'Время на прохождение (сек.)'
       category:
         title: 'Название'
       question:

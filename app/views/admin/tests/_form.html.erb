@@ -13,6 +13,10 @@
     <%= form.label :category_id %><br>
     <%= form.collection_select :category_id, all_categories, :id, :title, { prompt: true }, { class: 'form-select p-1' } %>
   </p>
+  <p>
+    <%= form.label :time_to_pass %><br>
+    <%= form.text_field :time_to_pass, class: "form-control"  %>
+  </p>
 
   <p><%= form.submit class: 'btn btn-primary' %></p>
 <% end %>
