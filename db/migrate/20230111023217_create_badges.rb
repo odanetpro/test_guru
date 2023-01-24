@@ -7,7 +7,7 @@ class CreateBadges < ActiveRecord::Migration[6.1]
       t.string :image_url, null: false
       t.integer :rule, null: false
       t.string :rule_criterion_value, null: false
-      
+
       t.timestamps
       t.index %i[rule rule_criterion_value], unique: true
     end
