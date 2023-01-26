@@ -187,8 +187,8 @@ ru:
   passing_tests:
     show:
       header: 'Прохождение теста "%{test_title}"'
+      timer_message:  'На прохождение осталось'
       nav: 'Вопрос %{number} из %{count}'
-      test_complited: 'Тест завершен'
     result:
       header: 'Тест %{test_title} завершен!'
       right_questions: 'Правильных ответов'
