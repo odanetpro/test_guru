@@ -30,4 +30,8 @@ class Test < ApplicationRecord
   def self.sort_by_category_title(category_title)
     by_category_title(category_title).pluck(:title)
   end
+
+  def with_timer?
+    !!time_to_pass
+  end
 end
