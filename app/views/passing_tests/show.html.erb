@@ -1,22 +1,23 @@
 <h2><%= t('.header', test_title: @passing_test.test.title) %></h2>
 
-<% if @passing_test.current_question %>
-  <div class="mt-4 mb-2"><%= t('.nav', number: @passing_test.current_question_number, count: @passing_test.test.questions.count) %>:</div>
-  <div class="progress-bar-base col col-md-4 mb-4">
-    <%= content_tag :div,
-                    class: 'progress-bar-line',
-                    data: {
-                      current_question: @passing_test.current_question_number,
-                      questions_total: @passing_test.test.questions.count
-                    } do%>
-    <% end %>
-  </div>
-
-  <h3><%= @passing_test.current_question.body %></h3>
-
-  <%= render 'form' %>
-<% else %>
-  <div class="mt-3 fs-5">
-    <%= t('.test_complited') %>...
+<% if @passing_test.test.with_timer? %>
+  <div>
+    <%= t('.timer_message') %>:
+    <%= content_tag :span, id: 'time-left', data: { time_left: @passing_test.time_left } do %><% end %>
   </div>
 <% end %>
+
+<div class="mt-4 mb-2"><%= t('.nav', number: @passing_test.current_question_number, count: @passing_test.test.questions.count) %>:</div>
+<div class="progress-bar-base col col-md-4 mb-4">
+  <%= content_tag :div,
+                  class: 'progress-bar-line',
+                  data: {
+                    current_question: @passing_test.current_question_number,
+                    questions_total: @passing_test.test.questions.count
+                  } do%>
+  <% end %>
+</div>
+
+<h3><%= @passing_test.current_question.body %></h3>
+
+<%= render 'form' %>
