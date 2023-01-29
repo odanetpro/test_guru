@@ -4,12 +4,15 @@ class PassingTestsController < ApplicationController
   before_action :set_passing_test, only: %i[show update result]
   before_action :set_badges, only: :result
 
-  def show; end
+  def show
+    redirect_to result_passing_test_path(@passing_test) if @passing_test.complited?
+  end
 
   def result; end
 
   def update
     @passing_test.accept!(params[:answer_ids])
+    @passing_test.check_left_time!
 
     if @passing_test.complited?
       if @passing_test.sucsessful?

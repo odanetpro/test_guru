@@ -1,6 +1,10 @@
 <p>
   <strong><%= t('.title') %>: </strong><%= @test.title %><br>
-  <strong><%= t('.level') %>: </strong><%= @test.level %>
+  <strong><%= t('.level') %>: </strong><%= @test.level %><br>
+  <strong><%= t('.category') %>: </strong><%= @test.category.title %><br>
+  <% if @test.time_to_pass %>
+    <strong><%= t('.time_to_pass') %>: </strong><%= @test.time_to_pass %>
+  <% end %>
 </p>
 
 <h2><%= t('.list') %>:</h2>
